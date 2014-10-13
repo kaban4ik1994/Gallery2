@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.WebUI", "Gallery.WebUI\Gallery.WebUI.csproj", "{68530D9A-4B30-44D4-BE34-5975A0F246FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.WebAPI", "Gallery.WebAPI\Gallery.WebAPI.csproj", "{6D68A178-7AFF-49F8-96C8-429C4040CE20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.DataBusiness", "Gallery.DataBusiness\Gallery.DataBusiness.csproj", "{CC8790B7-DFD8-44AA-B4A5-7EDC278439DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68530D9A-4B30-44D4-BE34-5975A0F246FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68530D9A-4B30-44D4-BE34-5975A0F246FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68530D9A-4B30-44D4-BE34-5975A0F246FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68530D9A-4B30-44D4-BE34-5975A0F246FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D68A178-7AFF-49F8-96C8-429C4040CE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D68A178-7AFF-49F8-96C8-429C4040CE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D68A178-7AFF-49F8-96C8-429C4040CE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D68A178-7AFF-49F8-96C8-429C4040CE20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8790B7-DFD8-44AA-B4A5-7EDC278439DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8790B7-DFD8-44AA-B4A5-7EDC278439DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8790B7-DFD8-44AA-B4A5-7EDC278439DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8790B7-DFD8-44AA-B4A5-7EDC278439DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
