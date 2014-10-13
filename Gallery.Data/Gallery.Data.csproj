@@ -30,7 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,7 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBInteractions\DbFactory.cs" />
+    <Compile Include="DBInteractions\Disposable.cs" />
+    <Compile Include="DBInteractions\EntityRepositoryBase.cs" />
+    <Compile Include="DBInteractions\IDbFactory.cs" />
+    <Compile Include="DBInteractions\IEntityRepository.cs" />
+    <Compile Include="DBInteractions\IUnitOfWork.cs" />
+    <Compile Include="DBInteractions\UnitOfWork.cs" />
+    <Compile Include="GalleryContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EntityRepositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gallety.Entities\Gallety.Entities.csproj">
+      <Project>{4b3cadfc-1672-4dca-a05f-c20ec1ac0ec8}</Project>
+      <Name>Gallety.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
