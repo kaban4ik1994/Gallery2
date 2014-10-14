@@ -1,4 +1,6 @@
-﻿namespace Gallery.Data.DBInteractions
+﻿using Gallery.Data.DBInteractions.Interface;
+
+namespace Gallery.Data.DBInteractions.Concrete
 {
     public class UnitOfWork:IUnitOfWork
     {

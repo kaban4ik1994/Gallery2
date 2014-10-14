@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Xml.Serialization;
+using Gallery.Data.DBInteractions.Interface;
 
-namespace Gallery.Data.DBInteractions
+namespace Gallery.Data.DBInteractions.Concrete
 {
     public class EntityRepositoryBase<T> where T : class
     {

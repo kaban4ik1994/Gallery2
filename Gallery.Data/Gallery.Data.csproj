@@ -46,18 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBInteractions\DbFactory.cs" />
-    <Compile Include="DBInteractions\Disposable.cs" />
-    <Compile Include="DBInteractions\EntityRepositoryBase.cs" />
-    <Compile Include="DBInteractions\IDbFactory.cs" />
-    <Compile Include="DBInteractions\IEntityRepository.cs" />
-    <Compile Include="DBInteractions\IUnitOfWork.cs" />
-    <Compile Include="DBInteractions\UnitOfWork.cs" />
+    <Compile Include="DBInteractions\Concrete\DbFactory.cs" />
+    <Compile Include="DBInteractions\Concrete\Disposable.cs" />
+    <Compile Include="DBInteractions\Concrete\EntityRepositoryBase.cs" />
+    <Compile Include="DBInteractions\Interface\IDbFactory.cs" />
+    <Compile Include="DBInteractions\Interface\IEntityRepository.cs" />
+    <Compile Include="DBInteractions\Interface\IUnitOfWork.cs" />
+    <Compile Include="DBInteractions\Concrete\UnitOfWork.cs" />
     <Compile Include="GalleryContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="EntityRepositories\" />
+    <Folder Include="EntityRepositories\Concrete\" />
+    <Folder Include="EntityRepositories\Interface\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

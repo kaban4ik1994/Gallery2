@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gallery.Data.DBInteractions
+namespace Gallery.Data.DBInteractions.Concrete
 {
     public class Disposable : IDisposable
     {

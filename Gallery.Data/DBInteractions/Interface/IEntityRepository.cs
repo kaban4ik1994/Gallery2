@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Gallery.Data.DBInteractions
+namespace Gallery.Data.DBInteractions.Interface
 {
     public interface IEntityRepository<T> where T : class
     {
