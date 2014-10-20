@@ -17,5 +17,6 @@ namespace Gallety.Entities
         [ForeignKey("UserRoleId")]
         public virtual DbRole Role { get; set; }
         public virtual List<DbComment> DbComments { get; set; }
+        public virtual List<DbToken> Tokens { get; set; }
     }
 }

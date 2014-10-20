@@ -11,9 +11,6 @@ namespace Gallety.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long GenreId { get; set; }
         public long GenreName { get; set; }
-        public long GenreDescriptionId { get; set; }
-        [ForeignKey("GenreDescriptionId")]
-        public DbDescription GenreDescription { get; set; }
         public virtual ICollection<DbPicture> Pictures { get; set; } 
     }
 }

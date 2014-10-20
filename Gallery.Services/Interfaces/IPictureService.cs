@@ -7,8 +7,8 @@ namespace Gallery.Services.Interfaces
     {
         IEnumerable<DbPicture> GetPictures();
         DbPicture GetPictureById(long id);
-        void CreatePicture(DbPainter painter);
-        void UpdatePicture(DbPainter painter);
+        void CreatePicture(DbPicture picture);
+        void UpdatePicture(DbPicture picture);
         void DeletePicture(long id);
         void SavePicture();
     }

@@ -7,6 +7,7 @@ namespace Gallery.Services.Interfaces
     {
         IEnumerable<DbUser> GetUsers();
         DbUser GetUserById(long id);
+        DbUser GetUserByEmailAndPasswordHash(string email, string passwordHash);
         void CreateUser(DbUser user);
         void UpdateUser(DbUser user);
         void DeleteUser(long id);

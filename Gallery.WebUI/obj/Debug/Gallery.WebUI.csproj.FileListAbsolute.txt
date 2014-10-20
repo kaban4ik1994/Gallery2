@@ -13,6 +13,9 @@ E:\программирование\курс4\1 семестр\курсовой 
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Webpages.Razor.xml
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Helpers.xml
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Mvc.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.csprojResolveAssemblyReference.cache
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.SqlServer.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.SqlServer.xml

@@ -14,9 +14,6 @@ namespace Gallety.Entities
         public long PictureDepartamentId { get; set; }
         public long PicturePainterId { get; set; }
         public long PictureGenreId { get; set; }
-        public long? PictureDescriptionId { get; set; }
-        [ForeignKey("PictureDescriptionId")]
-        public virtual DbDescription PictureDescription { get; set; }
         [ForeignKey("PictureDepartamentId")]
         public virtual DbDepartament DbDepartament { get; set; }
         [ForeignKey("PicturePainterId")]

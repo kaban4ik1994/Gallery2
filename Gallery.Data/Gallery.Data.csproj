@@ -61,6 +61,7 @@
     <Compile Include="EntityRepositories\Concrete\PainterRepository.cs" />
     <Compile Include="EntityRepositories\Concrete\PictureRepository.cs" />
     <Compile Include="EntityRepositories\Concrete\RoleRepository.cs" />
+    <Compile Include="EntityRepositories\Concrete\TokenRepository.cs" />
     <Compile Include="EntityRepositories\Concrete\UserRepository.cs" />
     <Compile Include="EntityRepositories\Interface\ICommentRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IDepartamentRepository.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="EntityRepositories\Interface\IPainterRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IPictureRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IRoleRepository.cs" />
+    <Compile Include="EntityRepositories\Interface\ITokenRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IUserRepository.cs" />
     <Compile Include="GalleryContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
