@@ -12,10 +12,12 @@ namespace Gallery.WebAPI.Controllers
     {
         private readonly IUserService _userService;
         private readonly ITokenSevice _tokenSevice;
-        public AccountController(IUserService userService, ITokenSevice tokenSevice)
+        private readonly IRoleService _roleService;
+        public AccountController(IUserService userService, ITokenSevice tokenSevice, IRoleService roleService)
         {
-             _userService = userService;
+            _userService = userService;
             _tokenSevice = tokenSevice;
+            _roleService = roleService;
         }
 
         public IHttpActionResult Get(string email, string passwordHash)
@@ -23,6 +25,20 @@ namespace Gallery.WebAPI.Controllers
             var user = _userService.GetUserByEmailAndPasswordHash(email, passwordHash);
             if (user == null) return BadRequest("User not found!");
             return Ok(user);
+        }
+
+        public IHttpActionResult Post(string userName, string email, string passwordHash)
+        {
+           
+            var user = new DbUser
+            {
+                Email = email,
+                UserName = userName,
+                PasswordHash = passwordHash,
+                UserRoleId = 1
+            };
+            _userService.CreateUser(user);
+            return Ok();
         }
     }
 }
