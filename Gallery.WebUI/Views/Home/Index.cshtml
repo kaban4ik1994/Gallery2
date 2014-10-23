@@ -1,8 +1,43 @@
-﻿
+﻿@using Gallery.WebUI.Models.Home
+@model IEnumerable<Gallery.WebUI.Models.Home.PictureViewModel>
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Gallery";
 }
 
-<h2>Index</h2>
+<div class="jumbotron">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            @for (var i = 0; i < Model.Count(); i++)
+            {
+                Html.RenderPartial("CarouselItemSummary", i == 0 ? new CarouselItemViewModel {ImageUrl = Model.ElementAt(i).ImageUrl, IsActive = true} : new CarouselItemViewModel {ImageUrl = Model.ElementAt(i).ImageUrl, IsActive = false});
+            }
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+
+    @foreach (var picture in Model)
+    {
+        Html.RenderPartial("PictureSummary", picture);
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
 

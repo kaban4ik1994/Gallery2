@@ -1,16 +1,30 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Gallery.WebUI.Models;
+﻿using System.Web.Mvc;
+using Gallery.WebUI.Models.Account;
 
 namespace Gallery.WebUI.Controllers
 {
-    
+    public class AccountController : Controller
+    {
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginViewModel model)
+        {
+            return RedirectToAction("Index","Home");
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Register(RegisterViewModel model)
+        {
+            return View();
+        }
+    }
 }
