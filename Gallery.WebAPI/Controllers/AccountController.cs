@@ -24,10 +24,10 @@ namespace Gallery.WebAPI.Controllers
         {
             var user = _userService.GetUserByEmailAndPasswordHash(email, passwordHash);
             if (user == null) return BadRequest("User not found!");
-            return Ok(user);
+            return Json(user);
         }
 
-        public IHttpActionResult Post(string userName, string email, string passwordHash)
+        public IHttpActionResult Put(string userName, string email, string passwordHash)
         {
            
             var user = new DbUser

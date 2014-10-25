@@ -10,7 +10,7 @@ namespace Gallety.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ImageId { get; set; }
         public string ImageName { get; set; }
-        public byte[] ImageContent { get; set; }
+        public string ImageUrl{ get; set; }
         public int ImageHeight { get; set; }
         public int ImageWidth { get; set; }
         public long? ImagePainterId { get; set; }
