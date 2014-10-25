@@ -42,3 +42,47 @@ E:\программирование\курс4\1 семестр\курсовой 
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.csprojResolveAssemblyReference.cache
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.WebAPI.dll.config
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.WebAPI.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.WebAPI.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\EntityFramework.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\EntityFramework.SqlServer.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Data.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Services.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallety.Entities.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Newtonsoft.Json.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ninject.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ninject.Web.Common.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ninject.Web.Mvc.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ninject.WebApi.DependencyResolver.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Net.Http.Formatting.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Helpers.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Http.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Http.WebHost.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Mvc.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Razor.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Webpages.Deployment.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Webpages.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Webpages.Razor.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\WebActivatorEx.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Data.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Services.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallety.Entities.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\EntityFramework.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\EntityFramework.SqlServer.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Newtonsoft.Json.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ninject.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ninject.Web.Common.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ninject.Web.Mvc.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Net.Http.Formatting.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Http.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Http.WebHost.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Razor.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Webpages.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Webpages.Deployment.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Webpages.Razor.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Helpers.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\System.Web.Mvc.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.csprojResolveAssemblyReference.cache
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb

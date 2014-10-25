@@ -182,3 +182,12 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+Gallery.v12.suo
+Gallery.v12.suo
+Gallery.WebAPI/bin/Gallery.WebAPI.dll
+*.suo
+Gallery.WebAPI/bin/Gallery.WebAPI.dll
+Gallery.WebAPI/bin/Gallery.WebAPI.pdb
+Gallery.WebAPI/obj/Debug/Gallery.WebAPI.csprojResolveAssemblyReference.cache
+Gallery.WebAPI/obj/Debug/Gallery.WebAPI.dll
+Gallery.WebAPI/obj/Debug/Gallery.WebAPI.pdb
