@@ -12,7 +12,7 @@ namespace Gallery.WebUI.Controllers
         private readonly AccountUtil _accountUtil;
         public AccountController()
         {
-            _accountUtil = new AccountUtil("http://localhost:19349/api/account");
+            _accountUtil = new AccountUtil(ConfigHeper.AccountApiUrl);
         }
         public ActionResult Login()
         {

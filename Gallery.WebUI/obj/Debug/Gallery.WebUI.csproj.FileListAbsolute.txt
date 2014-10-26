@@ -112,3 +112,10 @@ E:\программирование\курс4\1 семестр\курсовой 
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Util.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Models.pdb
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Util.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Common.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Mvc.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\WebActivatorEx.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Common.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Mvc.xml

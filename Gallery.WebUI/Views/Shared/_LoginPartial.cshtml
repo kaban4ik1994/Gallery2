@@ -3,7 +3,7 @@
 @using Gallery.WebUI.Helpers
 @model Gallery.WebUI.Models.Account.LoginViewModel
 @{
-    var user = AuthHelper.GetUser(Context, new AccountUtil("http://localhost:19349/api/account"));
+    var user = AuthHelper.GetUser(Context, new AccountUtil(ConfigHeper.AccountApiUrl));
 }
 @if (user!=null)
 {
