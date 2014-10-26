@@ -4,6 +4,7 @@ using Gallery.Data.DBInteractions.Interface;
 using Gallery.Data.EntityRepositories.Interface;
 using Gallery.Services.Interfaces;
 using Gallety.Entities;
+using Microsoft.SqlServer.Server;
 
 namespace Gallery.Services.Services
 {
@@ -32,6 +33,12 @@ namespace Gallery.Services.Services
         public DbUser GetUserByEmailAndPasswordHash(string email, string passwordHash)
         {
             var user = _userRepository.GetMany(x => x.Email == email && x.PasswordHash == passwordHash).FirstOrDefault();
+            return user;
+        }
+
+        public DbUser GetUserByEmail(string email)
+        {
+            var user = _userRepository.GetMany(x => x.Email == email).FirstOrDefault();
             return user;
         }
 

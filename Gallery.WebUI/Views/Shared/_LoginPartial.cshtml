@@ -1,6 +1,11 @@
-﻿@using Microsoft.AspNet.Identity
+﻿@using Gallery.Models.Models
+@using Gallery.Util.Conrete
+@using Gallery.WebUI.Helpers
 @model Gallery.WebUI.Models.Account.LoginViewModel
-@if (Request.IsAuthenticated)
+@{
+    var user = AuthHelper.GetUser(Context, new AccountUtil("http://localhost:19349/api/account"));
+}
+@if (user!=null)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
@@ -8,7 +13,7 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li>
-                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                @Html.ActionLink("Hello " + user.UserName, "Index","Home")
             </li>
             <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
         </ul>

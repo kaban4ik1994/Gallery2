@@ -18,6 +18,16 @@ namespace Gallery.WebAPI.Controllers
             _roleService = roleService;
         }
 
+        [HttpGet]
+        public IHttpActionResult Get(string email)
+        {
+            var dbUser = _userService.GetUserByEmail(email);
+            if (dbUser == null) return BadRequest("User not found!");
+            var user = Mapper.Map<User>(dbUser);
+            return Json(user);
+        }
+
+        [HttpGet]
         public IHttpActionResult Get(string email, string passwordHash)
         {
             var dbUser = _userService.GetUserByEmailAndPasswordHash(email, passwordHash);
@@ -26,6 +36,7 @@ namespace Gallery.WebAPI.Controllers
             return Json(user);
         }
 
+        [HttpPut]
         public IHttpActionResult Put(User user)
         {
             var dbUser = Mapper.Map<DbUser>(user);

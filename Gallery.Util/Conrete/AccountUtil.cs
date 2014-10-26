@@ -19,6 +19,16 @@ namespace Gallery.Util.Conrete
             ApiUrl = apiUrl;
         }
 
+        public User GetUserByEmail(string email)
+        {
+            using (var client = new HttpClient())
+            {
+                var result =
+                    client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
+                        new Dictionary<string, string> { { "email", email } })).Result;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+            }
+        }
 
         public User GetUserByEmailAndPasswordHash(string email, string passwordHash)
         {
@@ -26,7 +36,7 @@ namespace Gallery.Util.Conrete
             {
                 var result =
                     client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
-                        new Dictionary<string, string> {{"email", email}, {"passwordHash", passwordHash}})).Result;
+                        new Dictionary<string, string> { { "email", email }, { "passwordHash", passwordHash } })).Result;
                 return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
             }
         }
@@ -39,7 +49,7 @@ namespace Gallery.Util.Conrete
                     client.PutAsync(ApiUrl, new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json")).Result;
                 return result.StatusCode;
             }
-            
+
         }
     }
 }

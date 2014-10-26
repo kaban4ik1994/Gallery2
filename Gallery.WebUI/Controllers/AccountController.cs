@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Web;
+using System.Web.Mvc;
 using Gallery.Models.Models;
 using Gallery.Util.Conrete;
 using Gallery.WebUI.Helpers;
@@ -23,9 +24,14 @@ namespace Gallery.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                _accountUtil.GetUserByEmailAndPasswordHash(model.Email, SecurityHelper.Hash(model.Password));
+                var user = _accountUtil.GetUserByEmailAndPasswordHash(model.Email, SecurityHelper.Hash(model.Password));
+                if (user != null)
+                {
+                    AuthHelper.LogInUser(HttpContext, user.Email);
+                }
+                ViewBag.AccountUtil = _accountUtil;
             }
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult Register()
@@ -45,7 +51,13 @@ namespace Gallery.WebUI.Controllers
                     UserName = model.UserName
                 });
             }
-            return View();
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult LogOff()
+        {
+            AuthHelper.LogOffUser(HttpContext);
+            return RedirectToAction("Index", "Home");
         }
     }
 }

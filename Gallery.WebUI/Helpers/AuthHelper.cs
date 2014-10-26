@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web;
 using Gallery.Models.Models;
+using Gallery.Util.Conrete;
 
 namespace Gallery.WebUI.Helpers
 {
@@ -31,17 +32,12 @@ namespace Gallery.WebUI.Helpers
             }
         }
 
-        public static User GetUser(HttpContextBase httpContext)
+        public static User GetUser(HttpContextBase httpContext, AccountUtil accountUtil)
         {
             var authCookie = httpContext.Request.Cookies["__AUTH"];
-            //if (authCookie != null)
-            //{
-            //    var user = users.GetCustomerByUniqueidentifier(authCookie.Value);
-
-            //    return user;
-            //}
-
-            return null;
+            if (authCookie == null) return null;
+            var user = accountUtil.GetUserByEmail(authCookie.Value);
+            return user;
         }
     }
 }
