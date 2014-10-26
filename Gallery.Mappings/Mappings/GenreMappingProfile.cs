@@ -11,7 +11,7 @@ namespace Gallery.Mappings.Mappings
             base.Configure();
             MapDbGenreToGenre();
             MapGenreToDbGenre();
-            Mapper.AssertConfigurationIsValid();
+           // Mapper.AssertConfigurationIsValid();
         }
 
         private void MapDbGenreToGenre()

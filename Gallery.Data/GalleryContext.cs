@@ -5,7 +5,8 @@ namespace Gallery.Data
 {
     public class GalleryContext: DbContext
     {
-        public GalleryContext():base("GalleryDataBase")
+        public GalleryContext()
+            : base("GalleryDBConnectionString")
         {
         }
 

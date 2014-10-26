@@ -86,3 +86,10 @@ D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Sys
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.csprojResolveAssemblyReference.cache
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\AutoMapper.Net4.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\AutoMapper.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Mappings.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Models.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Mappings.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Models.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\AutoMapper.xml

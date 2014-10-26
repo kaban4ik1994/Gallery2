@@ -11,7 +11,7 @@ namespace Gallery.Mappings.Mappings
             base.Configure();
             MapDbPictureToPicture();
             MapPictureToDbPicture();
-            Mapper.AssertConfigurationIsValid();
+          //  Mapper.AssertConfigurationIsValid();
         }
 
         private void MapDbPictureToPicture()

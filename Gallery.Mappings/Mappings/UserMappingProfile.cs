@@ -11,7 +11,7 @@ namespace Gallery.Mappings.Mappings
             base.Configure();
             MapDbUserToUser();
             MapUserToDbUser();
-            Mapper.AssertConfigurationIsValid();
+            //Mapper.AssertConfigurationIsValid();
         }
 
         private void MapDbUserToUser()

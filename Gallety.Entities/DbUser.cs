@@ -13,7 +13,7 @@ namespace Gallety.Entities
         public string UserName { get; set; }
         public string Email { get; set; }
         public string PasswordHash { get; set; }
-        public long UserRoleId { get; set; }
+        public long? UserRoleId { get; set; }
         [ForeignKey("UserRoleId")]
         public virtual DbRole Role { get; set; }
         public virtual List<DbComment> DbComments { get; set; }

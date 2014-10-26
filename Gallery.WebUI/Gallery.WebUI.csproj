@@ -163,6 +163,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AuthHelper.cs" />
+    <Compile Include="Helpers\SecurityHelper.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
     <Compile Include="Models\Home\CarouselItemViewModel.cs" />
     <Compile Include="Models\Home\PictureViewModel.cs" />
@@ -236,6 +238,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gallery.Models\Gallery.Models.csproj">
+      <Project>{6ea8ffff-fede-4496-901e-7df9ce838f73}</Project>
+      <Name>Gallery.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gallery.Util\Gallery.Util.csproj">
+      <Project>{d3507586-82db-4f7d-bd8b-089f2db565b9}</Project>
+      <Name>Gallery.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,7 +11,7 @@ namespace Gallery.Mappings.Mappings
             base.Configure();
             MapCommentToDbComment();
             MapDbCommentToComment();
-            Mapper.AssertConfigurationIsValid();
+          //  Mapper.AssertConfigurationIsValid();
         }
 
         private void MapDbCommentToComment()

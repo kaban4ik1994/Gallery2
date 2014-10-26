@@ -11,7 +11,7 @@ namespace Gallery.Mappings.Mappings
             base.Configure();
             MapDbDepartamentToDepartament();
             MapDepartamentToDbDepartament();
-            Mapper.AssertConfigurationIsValid();
+          // Mapper.AssertConfigurationIsValid();
         }
 
         private void MapDbDepartamentToDepartament()

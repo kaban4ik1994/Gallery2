@@ -11,7 +11,7 @@ namespace Gallery.Mappings.Mappings
             base.Configure();
             MapDbDescriptionToDescription();
             MapDescriptionToDbDescription();
-            Mapper.AssertConfigurationIsValid();
+           // Mapper.AssertConfigurationIsValid();
         }
 
         private void MapDbDescriptionToDescription()

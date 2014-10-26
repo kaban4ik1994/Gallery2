@@ -1,10 +1,8 @@
-﻿using System;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
+using AutoMapper;
+using Gallery.Models.Models;
 using Gallery.Services.Interfaces;
 using Gallety.Entities;
-using Ninject;
 
 namespace Gallery.WebAPI.Controllers
 {
@@ -22,22 +20,16 @@ namespace Gallery.WebAPI.Controllers
 
         public IHttpActionResult Get(string email, string passwordHash)
         {
-            var user = _userService.GetUserByEmailAndPasswordHash(email, passwordHash);
-            if (user == null) return BadRequest("User not found!");
+            var dbUser = _userService.GetUserByEmailAndPasswordHash(email, passwordHash);
+            if (dbUser == null) return BadRequest("User not found!");
+            var user = Mapper.Map<User>(dbUser);
             return Json(user);
         }
 
-        public IHttpActionResult Put(string userName, string email, string passwordHash)
+        public IHttpActionResult Put(User user)
         {
-           
-            var user = new DbUser
-            {
-                Email = email,
-                UserName = userName,
-                PasswordHash = passwordHash,
-                UserRoleId = 1
-            };
-            _userService.CreateUser(user);
+            var dbUser = Mapper.Map<DbUser>(user);
+            _userService.CreateUser(dbUser);
             return Ok();
         }
     }

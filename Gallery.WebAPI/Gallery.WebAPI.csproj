@@ -38,6 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
@@ -156,6 +162,14 @@
       <Project>{2248bd43-19a0-4936-9a99-200447374f8d}</Project>
       <Name>Gallery.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Gallery.Mappings\Gallery.Mappings.csproj">
+      <Project>{90e91880-dca4-40b2-95fd-6b7422b76dd9}</Project>
+      <Name>Gallery.Mappings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gallery.Models\Gallery.Models.csproj">
+      <Project>{6ea8ffff-fede-4496-901e-7df9ce838f73}</Project>
+      <Name>Gallery.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gallery.Services\Gallery.Services.csproj">
       <Project>{2b7ce62d-e5d2-41e2-9d12-afa33ecdc570}</Project>
       <Name>Gallery.Services</Name>
@@ -190,6 +204,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

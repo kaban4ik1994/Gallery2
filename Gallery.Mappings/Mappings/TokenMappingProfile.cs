@@ -11,7 +11,7 @@ namespace Gallery.Mappings.Mappings
             base.Configure();
             MapDbTokenToToken();
             MapTokenToDbToken();
-            Mapper.AssertConfigurationIsValid();
+          //  Mapper.AssertConfigurationIsValid();
         }
 
         private void MapDbTokenToToken()

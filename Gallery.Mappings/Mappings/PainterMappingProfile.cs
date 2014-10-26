@@ -11,7 +11,7 @@ namespace Gallery.Mappings.Mappings
             base.Configure();
             MapDbPainterToPainter();
             MapPainterToDbPainter();
-            Mapper.AssertConfigurationIsValid();
+          //  Mapper.AssertConfigurationIsValid();
         }
 
         private void MapDbPainterToPainter()

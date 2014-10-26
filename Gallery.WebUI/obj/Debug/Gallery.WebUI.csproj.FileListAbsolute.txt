@@ -108,3 +108,7 @@ D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Micr
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\obj\Debug\Gallery.WebUI.csprojResolveAssemblyReference.cache
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\obj\Debug\Gallery.WebUI.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\obj\Debug\Gallery.WebUI.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Models.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Util.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Models.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Util.pdb

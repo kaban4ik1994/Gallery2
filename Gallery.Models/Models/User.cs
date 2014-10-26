@@ -14,7 +14,7 @@ namespace Gallery.Models.Models
         [JsonProperty("PasswordHash")]
         public string PasswordHash { get; set; }
         [JsonProperty("RoleId")]
-        public long UserRoleId { get; set; }
+        public long? UserRoleId { get; set; }
         [JsonProperty("Role")]
         public virtual Role Role { get; set; }
         [JsonProperty("Comments")]
