@@ -1,18 +1,21 @@
-﻿
-@using Gallery.Util.Conrete
+﻿@using Gallery.Util.Conrete
 @using Gallery.WebUI.Helpers
 @model Gallery.WebUI.Models.Account.LoginViewModel
 @{
     var user = AuthHelper.GetUser(Context, new AccountUtil(ConfigHeper.AccountApiUrl));
 }
-@if (user!=null)
+@if (user != null)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
         <ul class="nav navbar-nav navbar-right">
             <li>
-                @Html.ActionLink("Hello " + user.UserName, "EditAccount","Manage")
+                @Html.ActionLink("Hello " + user.UserName, "EditAccount", "Manage")
             </li>
+            @if (AuthHelper.IsAdministrator(Context))
+            {
+                <li>@Html.ActionLink("Admin page", "Index", "Admin") </li>
+            }
             <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
         </ul>
     }
@@ -33,6 +36,5 @@ else
         <div>
             <a href="@Url.Action("Register", "Account")">Registration</a>
         </div>
-
     }
 }

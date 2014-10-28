@@ -170,6 +170,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="CustomAttribute\PageAuthorizeAttribute.cs" />
     <Compile Include="Helpers\ConfigHeper.cs" />
@@ -243,6 +244,7 @@
     <Content Include="Views\Shared\PictureSummary.cshtml" />
     <Content Include="Views\Shared\CarouselItemSummary.cshtml" />
     <Content Include="Views\Manage\EditAccount.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

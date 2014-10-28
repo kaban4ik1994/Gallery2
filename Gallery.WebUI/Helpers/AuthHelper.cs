@@ -39,5 +39,14 @@ namespace Gallery.WebUI.Helpers
             var user = accountUtil.GetUserByEmail(authCookie.Value);
             return user;
         }
+
+        public static bool IsAdministrator(HttpContextBase httpContext)
+        {
+            var authCooke = httpContext.Request.Cookies["__AUTH"];
+            if (authCooke == null) return false;
+            var accountUtil = new AccountUtil(ConfigHeper.AccountApiUrl);
+            var user = accountUtil.GetUserByEmail(authCooke.Value);
+            return String.Equals("admin", user.Role.RoleName, StringComparison.CurrentCultureIgnoreCase);
+        }
     }
 }
