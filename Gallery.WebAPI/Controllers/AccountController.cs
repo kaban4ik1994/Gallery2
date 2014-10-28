@@ -34,7 +34,7 @@ namespace Gallery.WebAPI.Controllers
             var dbUser = _userService.GetUserByEmailAndPasswordHash(email, passwordHash);
             if (dbUser == null) return BadRequest("User not found!");
             var user = Mapper.Map<User>(dbUser);
-            return Json(user, new JsonSerializerSettings{ReferenceLoopHandling = ReferenceLoopHandling.Ignore});
+            return Json(user, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
 
         [HttpPut]
@@ -51,7 +51,7 @@ namespace Gallery.WebAPI.Controllers
             var dbUser = Mapper.Map<DbUser>(user);
             _userService.UpdateUser(dbUser);
             return Json(Mapper.Map<User>(dbUser), new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
-     
+
         }
 
         [HttpDelete]

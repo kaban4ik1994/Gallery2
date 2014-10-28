@@ -2,7 +2,7 @@
 
 namespace Gallery.Data.DBInteractions.Concrete
 {
-    public class DbFactory: Disposable, IDbFactory
+    public class DbFactory : Disposable, IDbFactory
     {
         private GalleryContext _galleryContext;
 
@@ -14,7 +14,7 @@ namespace Gallery.Data.DBInteractions.Concrete
         protected override void DisposeCore()
         {
             if (_galleryContext != null)
-            _galleryContext.Dispose();
+                _galleryContext.Dispose();
         }
     }
 }

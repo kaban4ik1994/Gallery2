@@ -18,8 +18,8 @@ namespace Gallery.Models.Models
         [JsonProperty("Role")]
         public virtual Role Role { get; set; }
         [JsonProperty("Comments")]
-        public virtual List<Comment> Comments { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
         [JsonProperty("Tokens")]
-        public virtual List<Token> Tokens { get; set; }
+        public virtual ICollection<Token> Tokens { get; set; }
     }
 }
