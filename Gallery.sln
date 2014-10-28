@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.WebAPI", "Gallery.WebAPI\Gallery.WebAPI.csproj", "{6D68A178-7AFF-49F8-96C8-429C4040CE20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallety.Entities", "Gallety.Entities\Gallety.Entities.csproj", "{4B3CADFC-1672-4DCA-A05F-C20EC1AC0EC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Entities", "Gallety.Entities\Gallery.Entities.csproj", "{4B3CADFC-1672-4DCA-A05F-C20EC1AC0EC8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Data", "Gallery.Data\Gallery.Data.csproj", "{2248BD43-19A0-4936-9A99-200447374F8D}"
 EndProject

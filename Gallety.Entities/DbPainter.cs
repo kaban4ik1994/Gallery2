@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Gallety.Entities
+namespace Gallery.Entities
 {
     [Table("Painters")]
     public class DbPainter

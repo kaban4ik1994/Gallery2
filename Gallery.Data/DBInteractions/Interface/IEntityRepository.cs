@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace Gallery.Data.DBInteractions.Interface
 {
@@ -10,7 +10,7 @@ namespace Gallery.Data.DBInteractions.Interface
         void Delete(T delete);
         void Delete(Func<T, Boolean> predicate);
         T GetById(long id);
-        IEnumerable<T> GetAll();
-        IEnumerable<T> GetMany(Func<T, bool> where);
+        IQueryable<T> GetAll();
+        IQueryable<T> GetMany(Func<T, bool> where);
     }
 }

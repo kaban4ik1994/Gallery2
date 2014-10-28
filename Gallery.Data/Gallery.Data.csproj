@@ -82,9 +82,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Gallety.Entities\Gallety.Entities.csproj">
+    <ProjectReference Include="..\Gallety.Entities\Gallery.Entities.csproj">
       <Project>{4b3cadfc-1672-4dca-a05f-c20ec1ac0ec8}</Project>
-      <Name>Gallety.Entities</Name>
+      <Name>Gallery.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

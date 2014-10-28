@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Gallety.Entities;
+using Gallery.Entities;
 
 namespace Gallery.Services.Interfaces
 {

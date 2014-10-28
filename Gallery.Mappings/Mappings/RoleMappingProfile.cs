@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using Gallery.Entities;
 using Gallery.Models.Models;
-using Gallety.Entities;
 
 namespace Gallery.Mappings.Mappings
 {

@@ -104,7 +104,6 @@ D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Data.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Mappings.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Models.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Services.dll
-D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallety.Entities.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Newtonsoft.Json.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Ninject.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Ninject.Web.Common.dll
@@ -124,7 +123,6 @@ D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Data.pdb
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Mappings.pdb
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Models.pdb
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Services.pdb
-D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallety.Entities.pdb
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\AutoMapper.xml
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\EntityFramework.xml
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\EntityFramework.SqlServer.xml
@@ -144,3 +142,5 @@ D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\System.Web.Mvc.xml
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.csprojResolveAssemblyReference.cache
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb
+D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Entities.dll
+D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Entities.pdb

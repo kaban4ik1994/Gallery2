@@ -1,5 +1,5 @@
 ﻿using Gallery.Data.DBInteractions.Interface;
-using Gallety.Entities;
+using Gallery.Entities;
 
 namespace Gallery.Data.EntityRepositories.Interface
 {

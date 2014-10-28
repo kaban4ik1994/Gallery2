@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using Gallety.Entities;
+using Gallery.Entities;
 
 namespace Gallery.Data
 {

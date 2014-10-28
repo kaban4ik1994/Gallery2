@@ -15,7 +15,7 @@ namespace Gallery.WebUI.Controllers
 
         public JsonResult EmailExists(string email)
         {
-            var result = _accountUtil.GetUserByEmail(email) != null;
+            var result = _accountUtil.GetUserByEmail(email) == null;
             return Json(result, JsonRequestBehavior.AllowGet);
         }
     }

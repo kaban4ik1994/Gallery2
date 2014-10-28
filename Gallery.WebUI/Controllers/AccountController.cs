@@ -19,7 +19,6 @@ namespace Gallery.WebUI.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Login(LoginViewModel model)
         {
             if (ModelState.IsValid)

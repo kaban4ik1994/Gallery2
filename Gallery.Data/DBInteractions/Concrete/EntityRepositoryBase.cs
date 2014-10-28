@@ -49,14 +49,14 @@ namespace Gallery.Data.DBInteractions.Concrete
             return _dbSet.Find(id);
         }
 
-        public virtual IEnumerable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
-            return _dbSet.ToList();
+            return _dbSet.AsQueryable();
         }
 
-        public virtual IEnumerable<T> GetMany(Func<T, bool> where)
+        public virtual IQueryable<T> GetMany(Func<T, bool> where)
         {
-            return _dbSet.Where(where).ToList();
+            return _dbSet.Where(where).AsQueryable();
         }
 
         public T Get(Func<T, Boolean> where)

@@ -1,8 +1,9 @@
 ﻿using System.Web.Http;
 using AutoMapper;
+using Gallery.Entities;
 using Gallery.Models.Models;
 using Gallery.Services.Interfaces;
-using Gallety.Entities;
+using Newtonsoft.Json;
 
 namespace Gallery.WebAPI.Controllers
 {
@@ -24,7 +25,7 @@ namespace Gallery.WebAPI.Controllers
             var dbUser = _userService.GetUserByEmail(email);
             if (dbUser == null) return BadRequest("User not found!");
             var user = Mapper.Map<User>(dbUser);
-            return Json(user);
+            return Json(user, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
 
         [HttpGet]
@@ -33,7 +34,7 @@ namespace Gallery.WebAPI.Controllers
             var dbUser = _userService.GetUserByEmailAndPasswordHash(email, passwordHash);
             if (dbUser == null) return BadRequest("User not found!");
             var user = Mapper.Map<User>(dbUser);
-            return Json(user);
+            return Json(user, new JsonSerializerSettings{ReferenceLoopHandling = ReferenceLoopHandling.Ignore});
         }
 
         [HttpPut]
@@ -41,7 +42,7 @@ namespace Gallery.WebAPI.Controllers
         {
             var dbUser = Mapper.Map<DbUser>(user);
             _userService.CreateUser(dbUser);
-            return Ok(dbUser);
+            return Json(Mapper.Map<User>(dbUser), new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
 
         [HttpPost]
@@ -49,7 +50,8 @@ namespace Gallery.WebAPI.Controllers
         {
             var dbUser = Mapper.Map<DbUser>(user);
             _userService.UpdateUser(dbUser);
-            return Ok(dbUser);
+            return Json(Mapper.Map<User>(dbUser), new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+     
         }
 
         [HttpDelete]

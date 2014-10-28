@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Gallety.Entities
+namespace Gallery.Entities
 {
     [Table("Images")]
     public class DbImage

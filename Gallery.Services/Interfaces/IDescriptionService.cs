@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
-using Gallety.Entities;
+using Gallery.Entities;
 
 namespace Gallery.Services.Interfaces
 {

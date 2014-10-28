@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using Gallery.Data.DBInteractions.Interface;
 using Gallery.Data.EntityRepositories.Interface;
+using Gallery.Entities;
 using Gallery.Services.Interfaces;
-using Gallety.Entities;
-using Microsoft.SqlServer.Server;
 
 namespace Gallery.Services.Services
 {
@@ -38,7 +38,7 @@ namespace Gallery.Services.Services
 
         public DbUser GetUserByEmail(string email)
         {
-            var user = _userRepository.GetMany(x => x.Email == email).FirstOrDefault();
+            var user = _userRepository.GetMany(x=>x.Email==email).Include(x=>x.Tokens).Include(x=>x.Role).Include(x=>x.DbComments).FirstOrDefault();
             return user;
         }
 

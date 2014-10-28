@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Gallery.Data.DBInteractions.Interface;
 using Gallery.Data.EntityRepositories.Interface;
+using Gallery.Entities;
 using Gallery.Services.Interfaces;
-using Gallety.Entities;
 
 namespace Gallery.Services.Services
 {

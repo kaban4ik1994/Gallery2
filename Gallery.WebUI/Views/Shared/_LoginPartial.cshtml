@@ -1,4 +1,4 @@
-﻿@using Gallery.Models.Models
+﻿
 @using Gallery.Util.Conrete
 @using Gallery.WebUI.Helpers
 @model Gallery.WebUI.Models.Account.LoginViewModel
@@ -9,8 +9,6 @@
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-        @Html.AntiForgeryToken()
-
         <ul class="nav navbar-nav navbar-right">
             <li>
                 @Html.ActionLink("Hello " + user.UserName, "EditAccount","Manage")
@@ -23,7 +21,6 @@ else
 {
     using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "navbar-form navbar-right", role = "form" }))
     {
-        @Html.AntiForgeryToken()
         <div class="form-group">
             @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
             @Html.TextBoxFor(x => x.Email, new { @placeholder = "Email", @class = "form-control" })
