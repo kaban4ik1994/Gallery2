@@ -1,0 +1,33 @@
+﻿@model Gallery.WebUI.Models.Manage.EditAccountViewModel
+
+@{
+    ViewBag.Title = "Edit Account";
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-offset-1 title">
+            <h1>@ViewBag.Title</h1>
+        </div>
+
+        <section id="register-form">
+            @using (Html.BeginForm("EditAccount", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <h4 class="col-md-offset-1">Edit Account.</h4>
+                <br />
+                @Html.EditorForModel()
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        <input type="submit" class="btn btn-success" value="Save" />
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -25,7 +25,7 @@ namespace Gallery.Util.Conrete
             {
                 var result =
                     client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
-                        new Dictionary<string, string> { { "email", email } })).Result;
+                        new Dictionary<string, object> { { "email", email } })).Result;
                 return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
             }
         }
@@ -36,20 +36,39 @@ namespace Gallery.Util.Conrete
             {
                 var result =
                     client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
-                        new Dictionary<string, string> { { "email", email }, { "passwordHash", passwordHash } })).Result;
+                        new Dictionary<string, object> { { "email", email }, { "passwordHash", passwordHash } })).Result;
                 return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
             }
         }
 
-        public HttpStatusCode Registration(User user)
+        public User Registration(User user)
         {
             using (var client = new HttpClient())
             {
                 var result =
                     client.PutAsync(ApiUrl, new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json")).Result;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+            }
+        }
+
+        public User UpdateUser(User user)
+        {
+            using (var client = new HttpClient())
+            {
+                var result =
+                    client.PostAsync(ApiUrl, new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json")).Result;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+            }
+        }
+
+        public HttpStatusCode DeleteUser(long id)
+        {
+            using (var client = new HttpClient())
+            {
+                var result =
+                    client.DeleteAsync(RequestHelper.GenerateRequestUrl(ApiUrl, new Dictionary<string, object> { { "id", id } })).Result;
                 return result.StatusCode;
             }
-
         }
     }
 }

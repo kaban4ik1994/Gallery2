@@ -170,6 +170,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Helpers\ConfigHeper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -183,6 +184,7 @@
     <Compile Include="Models\Home\CarouselItemViewModel.cs" />
     <Compile Include="Models\Home\PictureViewModel.cs" />
     <Compile Include="Models\Account\RegisterViewModel.cs" />
+    <Compile Include="Models\Manage\EditAccountViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -239,12 +241,12 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\PictureSummary.cshtml" />
     <Content Include="Views\Shared\CarouselItemSummary.cshtml" />
+    <Content Include="Views\Manage\EditAccount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Config\" />
     <Folder Include="Images\Painter\" />
-    <Folder Include="Views\Manage\" />
     <Folder Include="Views\Validation\" />
   </ItemGroup>
   <ItemGroup>

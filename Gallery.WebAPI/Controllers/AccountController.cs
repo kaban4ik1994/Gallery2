@@ -41,6 +41,21 @@ namespace Gallery.WebAPI.Controllers
         {
             var dbUser = Mapper.Map<DbUser>(user);
             _userService.CreateUser(dbUser);
+            return Ok(dbUser);
+        }
+
+        [HttpPost]
+        public IHttpActionResult Post(User user)
+        {
+            var dbUser = Mapper.Map<DbUser>(user);
+            _userService.UpdateUser(dbUser);
+            return Ok(dbUser);
+        }
+
+        [HttpDelete]
+        public IHttpActionResult Delete(long id)
+        {
+            _userService.DeleteUser(id);
             return Ok();
         }
     }

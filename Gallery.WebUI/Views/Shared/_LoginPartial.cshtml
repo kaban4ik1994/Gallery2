@@ -13,7 +13,7 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li>
-                @Html.ActionLink("Hello " + user.UserName, "Index","Home")
+                @Html.ActionLink("Hello " + user.UserName, "EditAccount","Manage")
             </li>
             <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
         </ul>
@@ -23,6 +23,7 @@ else
 {
     using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "navbar-form navbar-right", role = "form" }))
     {
+        @Html.AntiForgeryToken()
         <div class="form-group">
             @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
             @Html.TextBoxFor(x => x.Email, new { @placeholder = "Email", @class = "form-control" })

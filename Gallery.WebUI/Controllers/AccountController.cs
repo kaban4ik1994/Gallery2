@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Gallery.Models.Models;
 using Gallery.Util.Conrete;
 using Gallery.WebUI.Helpers;
@@ -20,6 +19,7 @@ namespace Gallery.WebUI.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
@@ -29,7 +29,6 @@ namespace Gallery.WebUI.Controllers
                 {
                     AuthHelper.LogInUser(HttpContext, user.Email);
                 }
-                ViewBag.AccountUtil = _accountUtil;
             }
             return RedirectToAction("Index", "Home");
         }
@@ -40,16 +39,18 @@ namespace Gallery.WebUI.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                _accountUtil.Registration(new User
-                {
-                    Email = model.Email,
-                    PasswordHash = SecurityHelper.Hash(model.Password),
-                    UserName = model.UserName
-                });
+                var user = _accountUtil.Registration(new User
+                  {
+                      Email = model.Email,
+                      PasswordHash = SecurityHelper.Hash(model.Password),
+                      UserName = model.UserName
+                  });
+                AuthHelper.LogInUser(HttpContext, user.Email);
             }
             return RedirectToAction("Index", "Home");
         }

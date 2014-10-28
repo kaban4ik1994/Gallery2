@@ -5,18 +5,17 @@ namespace Gallery.WebUI.Models.Account
 {
     public class RegisterViewModel
     {
-        [Required]
-        [Remote("UserNameExists", "Validation", ErrorMessage = "System doesn't have such UserName.")]
+        [Required(ErrorMessage = "Fill in the field.")]
         [Display(Name = "Name")]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Fill in the field.")]
         [Remote("EmailExists", "Validation", ErrorMessage = "System doesn't have such E-mail.")]
         [EmailAddress(ErrorMessage = "Email is not valid.")]
         [Display(Name = "E-mail")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Fill in the field.")]
         [StringLength(20, ErrorMessage = "The {0} must be between {2} and {1} characters long.", MinimumLength = 8)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
