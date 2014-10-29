@@ -49,7 +49,6 @@ D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ent
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\EntityFramework.SqlServer.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Data.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Services.dll
-D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallety.Entities.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Newtonsoft.Json.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ninject.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Ninject.Web.Common.dll
@@ -67,7 +66,6 @@ D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Sys
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\WebActivatorEx.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Data.pdb
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Services.pdb
-D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallety.Entities.pdb
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\EntityFramework.xml
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\EntityFramework.SqlServer.xml
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Newtonsoft.Json.xml
@@ -144,3 +142,12 @@ D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Entities.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Entities.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\AutoMapper.Net4.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\AutoMapper.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Entities.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Mappings.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Models.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Mappings.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Models.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Entities.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\AutoMapper.xml

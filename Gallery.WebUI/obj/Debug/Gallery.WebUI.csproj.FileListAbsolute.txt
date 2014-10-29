@@ -185,3 +185,14 @@ D:\Dev\Учеба\Github\Gallery2\Gallery.WebUI\bin\Microsoft.Owin.Security.Micr
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebUI\obj\Debug\Gallery.WebUI.csprojResolveAssemblyReference.cache
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebUI\obj\Debug\Gallery.WebUI.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebUI\obj\Debug\Gallery.WebUI.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Gallery.Models.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Gallery.Util.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Ninject.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Ninject.Web.Common.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Ninject.Web.Mvc.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\WebActivatorEx.dll
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Gallery.Models.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Gallery.Util.pdb
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Ninject.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Ninject.Web.Common.xml
+D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Ninject.Web.Mvc.xml
