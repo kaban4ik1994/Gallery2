@@ -33,8 +33,6 @@ else
             @Html.PasswordFor(x => x.Password, new { @placeholder = "Password", @class = "form-control" })
         </div>
         <button type="submit" class="btn btn-success">Sign in</button>
-        <div>
-            <a href="@Url.Action("Register", "Account")">Registration</a>
-        </div>
+        <input type='button' class="btn btn-success" value='Registration' onclick='window.location = "@Url.Action("Register", "Account") ";' />
     }
 }
