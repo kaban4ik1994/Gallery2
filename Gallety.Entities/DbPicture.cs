@@ -20,7 +20,7 @@ namespace Gallery.Entities
         public virtual DbPainter Painter { get; set; }
         [ForeignKey("PictureGenreId")]
         public virtual DbGenre Genre { get; set; }
-        public virtual ICollection<DbComment> Comments { get; set; }
-        public virtual ICollection<DbImage> Images { get; set; }
+        public ICollection<DbComment> Comments { get; set; }
+        public ICollection<DbImage> Images { get; set; }
     }
 }

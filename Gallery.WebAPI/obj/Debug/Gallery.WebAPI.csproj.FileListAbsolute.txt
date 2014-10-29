@@ -5,7 +5,6 @@ E:\программирование\курс4\1 семестр\курсовой 
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.SqlServer.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Data.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Services.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallety.Entities.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Newtonsoft.Json.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.Web.Common.dll
@@ -23,7 +22,6 @@ E:\программирование\курс4\1 семестр\курсовой 
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\WebActivatorEx.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Data.pdb
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Services.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallety.Entities.pdb
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.xml
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.SqlServer.xml
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Newtonsoft.Json.xml
@@ -144,3 +142,5 @@ D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Entities.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.Entities.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Entities.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Entities.pdb

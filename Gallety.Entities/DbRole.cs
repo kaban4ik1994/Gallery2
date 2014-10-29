@@ -11,6 +11,6 @@ namespace Gallery.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long RoleId { get; set; }
         public string RoleName { get; set; }
-        public virtual ICollection<DbUser> Users { get; set; }
+        public ICollection<DbUser> Users { get; set; }
     }
 }

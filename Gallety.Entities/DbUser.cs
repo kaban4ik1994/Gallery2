@@ -16,7 +16,7 @@ namespace Gallery.Entities
         public long? UserRoleId { get; set; }
         [ForeignKey("UserRoleId")]
         public virtual DbRole Role { get; set; }
-        public virtual ICollection<DbComment> DbComments { get; set; }
-        public virtual ICollection<DbToken> Tokens { get; set; }
+        public ICollection<DbComment> DbComments { get; set; }
+        public ICollection<DbToken> Tokens { get; set; }
     }
 }
