@@ -11,6 +11,6 @@ namespace Gallery.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long GenreId { get; set; }
         public long GenreName { get; set; }
-        public virtual ICollection<DbPicture> Pictures { get; set; } 
+        public ICollection<DbPicture> Pictures { get; set; }
     }
 }

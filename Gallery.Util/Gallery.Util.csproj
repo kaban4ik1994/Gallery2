@@ -44,8 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conrete\AccountUtil.cs" />
+    <Compile Include="Conrete\DepartamentUtil.cs" />
+    <Compile Include="Conrete\GenreUtil.cs" />
+    <Compile Include="Conrete\PainterUtil.cs" />
     <Compile Include="Helpers\RequestHelper.cs" />
     <Compile Include="Interfaces\IAccountUtil.cs" />
+    <Compile Include="Interfaces\IDepartamentUtil.cs" />
+    <Compile Include="Interfaces\IGenreUtil.cs" />
+    <Compile Include="Interfaces\IPainterUtil.cs" />
     <Compile Include="Interfaces\IUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

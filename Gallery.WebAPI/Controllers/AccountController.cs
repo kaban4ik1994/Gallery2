@@ -10,13 +10,9 @@ namespace Gallery.WebAPI.Controllers
     public class AccountController : ApiController
     {
         private readonly IUserService _userService;
-        private readonly ITokenSevice _tokenSevice;
-        private readonly IRoleService _roleService;
-        public AccountController(IUserService userService, ITokenSevice tokenSevice, IRoleService roleService)
+        public AccountController(IUserService userService)
         {
             _userService = userService;
-            _tokenSevice = tokenSevice;
-            _roleService = roleService;
         }
 
         [HttpGet]

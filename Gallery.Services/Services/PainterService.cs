@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using Gallery.Data.DBInteractions.Interface;
 using Gallery.Data.EntityRepositories.Interface;
 using Gallery.Entities;
@@ -6,7 +8,7 @@ using Gallery.Services.Interfaces;
 
 namespace Gallery.Services.Services
 {
-    public class PainterService: IPainterService
+    public class PainterService : IPainterService
     {
         private readonly IPainterRepository _painterRepository;
         private readonly IUnitOfWork _unitOfWork;
@@ -24,7 +26,7 @@ namespace Gallery.Services.Services
 
         public DbPainter GetPainterById(long id)
         {
-            var painter = _painterRepository.GetById(id);
+            var painter = _painterRepository.GetMany(x => x.PainterId == id).Include(x => x.Images).Include(x => x.Pictures).FirstOrDefault();
             return painter;
         }
 

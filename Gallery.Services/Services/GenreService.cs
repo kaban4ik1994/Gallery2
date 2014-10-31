@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using Gallery.Data.DBInteractions.Interface;
 using Gallery.Data.EntityRepositories.Interface;
 using Gallery.Entities;
@@ -24,7 +26,7 @@ namespace Gallery.Services.Services
 
         public DbGenre GetGenreById(long id)
         {
-            var genre = _genreRepository.GetById(id);
+            var genre = _genreRepository.GetMany(x => x.GenreId == id).Include(x => x.Pictures).FirstOrDefault();
             return genre;
         }
 
