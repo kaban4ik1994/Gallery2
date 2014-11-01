@@ -19,6 +19,16 @@ namespace Gallery.Util.Conrete
             ApiUrl = apiUrl;
         }
 
+        public IEnumerable<Departament> GetDepartaments()
+        {
+            using (var client = new HttpClient())
+            {
+                var result =
+                    client.GetAsync(ApiUrl).Result;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<List<Departament>>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+            }
+        }
+
         public Departament GetDepartamentById(long id)
         {
             using (var client = new HttpClient())

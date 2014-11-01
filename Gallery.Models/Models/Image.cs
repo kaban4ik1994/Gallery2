@@ -21,10 +21,10 @@ namespace Gallery.Models.Models
         [JsonProperty("UserId")]
         public long? ImageUserId { get; set; }
         [JsonProperty("Painter")]
-        public virtual Painter Painter { get; set; }
+        public Painter Painter { get; set; }
         [JsonProperty("Picture")]
-        public virtual Picture Picture { get; set; }
+        public Picture Picture { get; set; }
         [JsonProperty("User")]
-        public virtual User User { get; set; }
+        public User User { get; set; }
     }
 }

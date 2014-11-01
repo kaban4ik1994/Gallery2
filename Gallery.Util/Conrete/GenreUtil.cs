@@ -19,6 +19,16 @@ namespace Gallery.Util.Conrete
             ApiUrl = apiUrl;
         }
 
+        public IEnumerable<Genre> GetGenres()
+        {
+            using (var client = new HttpClient())
+            {
+                var result =
+                    client.GetAsync(ApiUrl).Result;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<IEnumerable<Genre>>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+            }
+        }
+
         public Genre GetGenreById(long id)
         {
             using (var client = new HttpClient())

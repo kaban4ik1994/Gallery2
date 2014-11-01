@@ -55,7 +55,6 @@
     <Compile Include="DBInteractions\Concrete\UnitOfWork.cs" />
     <Compile Include="EntityRepositories\Concrete\CommentRepository.cs" />
     <Compile Include="EntityRepositories\Concrete\DepartamentRepository.cs" />
-    <Compile Include="EntityRepositories\Concrete\DescriptionRepository.cs" />
     <Compile Include="EntityRepositories\Concrete\GenreRepository.cs" />
     <Compile Include="EntityRepositories\Concrete\ImageRepository.cs" />
     <Compile Include="EntityRepositories\Concrete\PainterRepository.cs" />
@@ -65,7 +64,6 @@
     <Compile Include="EntityRepositories\Concrete\UserRepository.cs" />
     <Compile Include="EntityRepositories\Interface\ICommentRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IDepartamentRepository.cs" />
-    <Compile Include="EntityRepositories\Interface\IDescriptionRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IGenreRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IImageRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IPainterRepository.cs" />

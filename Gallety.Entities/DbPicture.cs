@@ -15,12 +15,12 @@ namespace Gallery.Entities
         public long PicturePainterId { get; set; }
         public long PictureGenreId { get; set; }
         [ForeignKey("PictureDepartamentId")]
-        public virtual DbDepartament DbDepartament { get; set; }
+        public DbDepartament DbDepartament { get; set; }
         [ForeignKey("PicturePainterId")]
-        public virtual DbPainter Painter { get; set; }
+        public DbPainter Painter { get; set; }
         [ForeignKey("PictureGenreId")]
-        public virtual DbGenre Genre { get; set; }
-        public virtual ICollection<DbComment> Comments { get; set; }
-        public virtual ICollection<DbImage> Images { get; set; }
+        public DbGenre Genre { get; set; }
+        public ICollection<DbComment> Comments { get; set; }
+        public ICollection<DbImage> Images { get; set; }
     }
 }

@@ -22,6 +22,14 @@ namespace Gallery.WebAPI.Controllers
         }
 
         [HttpGet]
+        public IHttpActionResult Get()
+        {
+            var dbGenres = _genreService.GetGenres();
+            var genres = dbGenres.Select(Mapper.Map<Genre>).ToList();
+            return Json(genres, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+        }
+
+        [HttpGet]
         public IHttpActionResult Get(long id)
         {
             var dbGenre = _genreService.GetGenreById(id);

@@ -1,58 +1,3 @@
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.WebUI.dll.config
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.WebUI.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.WebUI.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Antlr3.Runtime.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.SqlServer.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.Core.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Cookies.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Facebook.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Google.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.OAuth.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Twitter.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Web.Infrastructure.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Newtonsoft.Json.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Owin.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Helpers.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Mvc.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Optimization.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Razor.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.Deployment.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.Razor.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\WebGrease.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Helpers.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Mvc.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Optimization.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Razor.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.Deployment.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.Razor.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Antlr3.Runtime.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Newtonsoft.Json.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.SqlServer.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.Core.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Facebook.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Cookies.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Google.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.csprojResolveAssemblyReference.cache
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.pdb
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Gallery.WebUI.dll.config
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Gallery.WebUI.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Gallery.WebUI.pdb
@@ -108,17 +53,6 @@ D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Micr
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\obj\Debug\Gallery.WebUI.csprojResolveAssemblyReference.cache
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\obj\Debug\Gallery.WebUI.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\obj\Debug\Gallery.WebUI.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Models.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Util.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Models.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Util.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Common.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Mvc.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\WebActivatorEx.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Common.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Mvc.xml
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebUI\bin\Gallery.WebUI.dll.config
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebUI\bin\Gallery.WebUI.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebUI\bin\Gallery.WebUI.pdb
@@ -196,3 +130,70 @@ D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Gall
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Ninject.xml
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Ninject.Web.Common.xml
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebUI\bin\Ninject.Web.Mvc.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.WebUI.dll.config
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.WebUI.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.WebUI.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Antlr3.Runtime.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.SqlServer.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Models.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Util.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\GridMvc.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.Core.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Cookies.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Facebook.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Google.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.OAuth.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Twitter.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Web.Infrastructure.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Newtonsoft.Json.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Common.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Mvc.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Owin.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Helpers.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Mvc.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Optimization.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Razor.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.Deployment.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.Razor.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\WebActivatorEx.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\WebGrease.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Models.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Gallery.Util.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Common.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Ninject.Web.Mvc.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Helpers.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Mvc.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Razor.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.Deployment.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.WebPages.Razor.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\System.Web.Optimization.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Antlr3.Runtime.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Newtonsoft.Json.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\EntityFramework.SqlServer.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.Core.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Facebook.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Cookies.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Google.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.csprojResolveAssemblyReference.cache
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.pdb

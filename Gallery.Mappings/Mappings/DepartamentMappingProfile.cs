@@ -20,8 +20,8 @@ namespace Gallery.Mappings.Mappings
                 .ForMember(de => de.DepartamentId, options => options.MapFrom(so => so.DepartamentId))
                 .ForMember(de => de.DepartamentName, options => options.MapFrom(so => so.DepartamentName))
                 .ForMember(de => de.DepartamentNumber, options => options.MapFrom(so => so.DepartamentNumber))
-                .ForMember(de => de.DepartamentDescriptionId,
-                    options => options.MapFrom(so => so.DepartamentDescriptionId))
+                .ForMember(de => de.DepartamentDescription,
+                    options => options.MapFrom(so => so.DepartamentDescription))
                 .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture));
         }
 
@@ -31,8 +31,8 @@ namespace Gallery.Mappings.Mappings
                .ForMember(de => de.DepartamentId, options => options.MapFrom(so => so.DepartamentId))
                .ForMember(de => de.DepartamentName, options => options.MapFrom(so => so.DepartamentName))
                .ForMember(de => de.DepartamentNumber, options => options.MapFrom(so => so.DepartamentNumber))
-               .ForMember(de => de.DepartamentDescriptionId,
-                   options => options.MapFrom(so => so.DepartamentDescriptionId))
+               .ForMember(de => de.DepartamentDescription,
+                   options => options.MapFrom(so => so.DepartamentDescription))
                .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture));
         }
     }

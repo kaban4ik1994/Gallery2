@@ -19,6 +19,16 @@ namespace Gallery.Util.Conrete
             ApiUrl = apiUrl;
         }
 
+        public IEnumerable<Painter> GetPainters()
+        {
+            using (var client = new HttpClient())
+            {
+                var result =
+                    client.GetAsync(ApiUrl).Result;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<IEnumerable<Painter>>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+            }
+        }
+
         public Painter GetPainterById(long id)
         {
             using (var client = new HttpClient())

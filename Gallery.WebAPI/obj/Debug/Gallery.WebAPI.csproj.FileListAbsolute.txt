@@ -1,45 +1,3 @@
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.WebAPI.dll.config
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.WebAPI.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.WebAPI.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.SqlServer.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Data.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Services.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Newtonsoft.Json.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.Web.Common.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.Web.Mvc.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.WebApi.DependencyResolver.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Net.Http.Formatting.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Helpers.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Http.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Http.WebHost.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Mvc.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Razor.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.Deployment.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.Razor.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\WebActivatorEx.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Data.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Services.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.SqlServer.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Newtonsoft.Json.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.Web.Common.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.Web.Mvc.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Net.Http.Formatting.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Http.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Http.WebHost.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Razor.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.Deployment.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.Razor.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Helpers.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Mvc.xml
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.csprojResolveAssemblyReference.cache
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.WebAPI.dll.config
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.WebAPI.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.WebAPI.pdb
@@ -82,13 +40,6 @@ D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Sys
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.csprojResolveAssemblyReference.cache
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\AutoMapper.Net4.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\AutoMapper.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Mappings.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Models.dll
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Mappings.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Models.pdb
-E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\AutoMapper.xml
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\AutoMapper.Net4.dll
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.WebAPI.dll.config
 D:\Dev\Учеба\Github\Gallery2\Gallery.WebAPI\bin\Gallery.WebAPI.dll
@@ -149,5 +100,54 @@ D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gal
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Models.pdb
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\Gallery.Entities.pdb
 D:\Учёба\Univercity\4курс-лабы\БД\Gallery2\Gallery.WebAPI\bin\AutoMapper.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\AutoMapper.Net4.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.WebAPI.dll.config
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.WebAPI.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.WebAPI.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\AutoMapper.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.SqlServer.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Data.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Entities.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Mappings.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Models.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Services.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Newtonsoft.Json.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.Web.Common.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.Web.Mvc.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.WebApi.DependencyResolver.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Net.Http.Formatting.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Helpers.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Http.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Http.WebHost.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Mvc.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Razor.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.Deployment.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.Razor.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\WebActivatorEx.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Data.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Mappings.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Models.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Services.pdb
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Gallery.Entities.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\AutoMapper.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\EntityFramework.SqlServer.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Newtonsoft.Json.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.Web.Common.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\Ninject.Web.Mvc.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Net.Http.Formatting.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Http.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Http.WebHost.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Razor.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.Deployment.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Webpages.Razor.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Helpers.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\bin\System.Web.Mvc.xml
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.csprojResolveAssemblyReference.cache
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb

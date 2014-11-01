@@ -11,9 +11,9 @@ namespace Gallery.Models.Models
         public string DepartamentName { get; set; }
         [JsonProperty("Number")]
         public long DepartamentNumber { get; set; }
-        [JsonProperty("DescriptionId")]
-        public long DepartamentDescriptionId { get; set; }
+        [JsonProperty("Description")]
+        public string DepartamentDescription { get; set; } 
         [JsonProperty("Pictures")]
-        public virtual ICollection<Picture> Picture { get; set; }
+        public ICollection<Picture> Picture { get; set; }
     }
 }

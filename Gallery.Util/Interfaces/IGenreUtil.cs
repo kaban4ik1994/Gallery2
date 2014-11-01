@@ -1,10 +1,12 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Net;
 using Gallery.Models.Models;
 
 namespace Gallery.Util.Interfaces
 {
     public interface IGenreUtil : IUtil
     {
+        IEnumerable<Genre> GetGenres();
         Genre GetGenreById(long id);
         Genre CreateGenre(Genre genre);
         Genre UpdateGenre(Genre genre);

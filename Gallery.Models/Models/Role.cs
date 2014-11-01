@@ -10,6 +10,6 @@ namespace Gallery.Models.Models
         [JsonProperty("Name")]
         public string RoleName { get; set; }
         [JsonProperty("Users")]
-        public virtual ICollection<User> Users { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }

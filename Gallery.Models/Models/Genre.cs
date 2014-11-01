@@ -10,6 +10,6 @@ namespace Gallery.Models.Models
         [JsonProperty("Name")]
         public long GenreName { get; set; }
         [JsonProperty("Pictures")]
-        public virtual ICollection<Picture> Pictures { get; set; } 
+        public ICollection<Picture> Pictures { get; set; } 
     }
 }

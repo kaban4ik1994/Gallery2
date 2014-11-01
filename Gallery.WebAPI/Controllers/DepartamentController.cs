@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
 using AutoMapper;
 using Gallery.Entities;
 using Gallery.Models.Models;
@@ -14,6 +16,14 @@ namespace Gallery.WebAPI.Controllers
         public DepartamentController(IDepartamentService departamentService)
         {
             _departamentService = departamentService;
+        }
+
+        [HttpGet]
+        public IHttpActionResult Get()
+        {
+            var dbDepartaments = _departamentService.GetDepartaments();
+            var departaments = dbDepartaments.Select(Mapper.Map<Departament>).ToList();
+            return Json(JsonConvert.SerializeObject(departaments), new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
 
         [HttpGet]

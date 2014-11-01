@@ -12,6 +12,6 @@ namespace Gallery.Entities
         public string Token { get; set; }
         public long UserId { get; set; }
         [ForeignKey("UserId")]
-        public virtual DbUser User { get; set; }
+        public DbUser User { get; set; }
     }
 }

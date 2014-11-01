@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="Mappings\CommentMappingProfile.cs" />
     <Compile Include="Mappings\DepartamentMappingProfile.cs" />
-    <Compile Include="Mappings\DescriptionMappingProfile.cs" />
     <Compile Include="Mappings\GenreMappingProfile.cs" />
     <Compile Include="Mappings\ImageMappingProfile.cs" />
     <Compile Include="Mappings\PainterMappingProfile.cs" />

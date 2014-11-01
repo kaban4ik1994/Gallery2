@@ -12,7 +12,6 @@ namespace Gallery.Data
 
         public DbSet<DbComment> Comments { get; set; }
         public DbSet<DbDepartament> Departaments { get; set; }
-        public DbSet<DbDescription> Descriptions { get; set; }
         public DbSet<DbGenre> Genres { get; set; }
         public DbSet<DbImage> Images { get; set; }
         public DbSet<DbPainter> Painters { get; set; }

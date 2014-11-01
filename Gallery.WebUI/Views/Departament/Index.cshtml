@@ -1,0 +1,29 @@
+﻿@using GridMvc.Html
+@model IEnumerable<Gallery.WebUI.Models.Departament.DepartamentViewModel>
+
+@{
+    ViewBag.Title = "Departaments";
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-offset-1 title">
+            <h1>@ViewBag.Title</h1>
+        </div>
+
+        @Html.Grid(Model, "_MyCustomGrid").Columns(
+            columns =>
+            {
+                columns.Add(foo => foo.Id, true);
+                columns.Add(foo => foo.Number).Sortable(true).Titled("Number");
+                columns.Add(foo => foo.Name).Sortable(true).Titled("Name");
+                columns.Add(foo => foo.Description).Sortable(true).Titled("Description");
+            }).WithPaging(20)
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/gridmvc")
+}

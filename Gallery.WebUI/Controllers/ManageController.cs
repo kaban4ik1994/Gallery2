@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Gallery.Util.Conrete;
+using Gallery.Util.Interfaces;
 using Gallery.WebUI.CustomAttribute;
 using Gallery.WebUI.Helpers;
 using Gallery.WebUI.Models.Manage;
@@ -8,7 +9,7 @@ namespace Gallery.WebUI.Controllers
 {
     public class ManageController : Controller
     {
-        private readonly AccountUtil _accountUtil;
+        private readonly IAccountUtil _accountUtil;
 
         public ManageController()
         {

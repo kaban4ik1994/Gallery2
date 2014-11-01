@@ -12,8 +12,7 @@ namespace Gallery.Entities
         public long DepartamentId { get; set; }
         public string DepartamentName { get; set; }
         public long DepartamentNumber { get; set; }
-        public long DepartamentDescriptionId { get; set; }
-        [ForeignKey("DepartamentDescriptionId")]
-        public virtual ICollection<DbPicture> Picture { get; set; }
+        public string DepartamentDescription { get; set; } 
+        public ICollection<DbPicture> Picture { get; set; }
     }
 }

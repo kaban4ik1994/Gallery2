@@ -2,6 +2,7 @@
 using System.Web;
 using Gallery.Models.Models;
 using Gallery.Util.Conrete;
+using Gallery.Util.Interfaces;
 
 namespace Gallery.WebUI.Helpers
 {
@@ -32,7 +33,7 @@ namespace Gallery.WebUI.Helpers
             }
         }
 
-        public static User GetUser(HttpContextBase httpContext, AccountUtil accountUtil)
+        public static User GetUser(HttpContextBase httpContext, IAccountUtil accountUtil)
         {
             var authCookie = httpContext.Request.Cookies["__AUTH"];
             if (authCookie == null) return null;

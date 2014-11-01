@@ -68,7 +68,6 @@ namespace Gallery.WebAPI.App_Start
             //Repositories
             kernel.Bind<ICommentRepository>().To<CommentRepository>();
             kernel.Bind<IDepartamentRepository>().To<DepartamentRepository>();
-            kernel.Bind<IDescriptionRepository>().To<DescriptionRepository>();
             kernel.Bind<IGenreRepository>().To<GenreRepository>();
             kernel.Bind<IImageRepository>().To<ImageRepository>();
             kernel.Bind<IPainterRepository>().To<PainterRepository>();
@@ -80,7 +79,6 @@ namespace Gallery.WebAPI.App_Start
             //Services
             kernel.Bind<ICommentService>().To<CommentService>();
             kernel.Bind<IDepartamentService>().To<DepartamentService>();
-            kernel.Bind<IDescriptionService>().To<DescriptionService>();
             kernel.Bind<IGenreService>().To<GenreService>();
             kernel.Bind<IImageService>().To<ImageService>();
             kernel.Bind<IPainterService>().To<PainterService>();

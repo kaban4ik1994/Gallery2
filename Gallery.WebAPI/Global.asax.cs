@@ -28,7 +28,6 @@ namespace Gallery.WebAPI
                 config.AddProfile<UserMappingProfile>();
                 config.AddProfile<CommentMappingProfile>();
                 config.AddProfile<DepartamentMappingProfile>();
-                config.AddProfile<DescriptionMappingProfile>();
                 config.AddProfile<GenreMappingProfile>();
                 config.AddProfile<ImageMappingProfile>();
                 config.AddProfile<PainterMappingProfile>();

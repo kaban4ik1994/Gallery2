@@ -41,7 +41,7 @@ namespace Gallery.Services.Services
             var user = _userRepository.GetMany(x=>x.Email==email).Include(x=>x.Tokens).Include(x=>x.Role).Include(x=>x.DbComments).FirstOrDefault();
             return user;
         }
-
+        
         public void CreateUser(DbUser user)
         {
             _userRepository.Add(user);

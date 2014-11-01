@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="DbComment.cs" />
     <Compile Include="DbDepartament.cs" />
-    <Compile Include="DbDescription.cs" />
     <Compile Include="DbGenre.cs" />
     <Compile Include="DbImage.cs" />
     <Compile Include="DbPainter.cs" />

@@ -11,6 +11,6 @@ namespace Gallery.Models.Models
         [JsonProperty("UserId")]
         public long UserId { get; set; }
         [JsonProperty("User")]
-        public virtual User User { get; set; }
+        public User User { get; set; }
     }
 }

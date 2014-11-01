@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Linq;
+using System.Web.Http;
 using AutoMapper;
 using Gallery.Entities;
 using Gallery.Models.Models;
@@ -15,6 +16,15 @@ namespace Gallery.WebAPI.Controllers
         {
             _painterService = painterService;
         }
+
+        [HttpGet]
+        public IHttpActionResult Get()
+        {
+            var dbPainters = _painterService.GetPainters();
+            var painters = dbPainters.Select(Mapper.Map<Painter>).ToList();
+            return Json(painters, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+        }
+
 
         [HttpGet]
         public IHttpActionResult Get(long id)

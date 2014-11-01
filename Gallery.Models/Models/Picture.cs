@@ -16,14 +16,14 @@ namespace Gallery.Models.Models
         [JsonProperty("GenreId")]
         public long PictureGenreId { get; set; }
         [JsonProperty("Departament")]
-        public virtual Departament Departament { get; set; }
+        public Departament Departament { get; set; }
         [JsonProperty("Painter")]
-        public virtual Painter Painter { get; set; }
+        public Painter Painter { get; set; }
         [JsonProperty("Genre")]
-        public virtual Genre Genre { get; set; }
+        public Genre Genre { get; set; }
         [JsonProperty("Comments")]
-        public virtual ICollection<Comment> Comments { get; set; }
+        public ICollection<Comment> Comments { get; set; }
         [JsonProperty("Images")]
-        public virtual ICollection<Image> Images { get; set; }
+        public ICollection<Image> Images { get; set; }
     }
 }

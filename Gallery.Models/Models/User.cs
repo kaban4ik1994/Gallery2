@@ -16,10 +16,10 @@ namespace Gallery.Models.Models
         [JsonProperty("RoleId")]
         public long? UserRoleId { get; set; }
         [JsonProperty("Role")]
-        public virtual Role Role { get; set; }
+        public Role Role { get; set; }
         [JsonProperty("Comments")]
-        public virtual ICollection<Comment> Comments { get; set; }
+        public ICollection<Comment> Comments { get; set; }
         [JsonProperty("Tokens")]
-        public virtual ICollection<Token> Tokens { get; set; }
+        public ICollection<Token> Tokens { get; set; }
     }
 }

@@ -15,6 +15,6 @@ namespace Gallery.Entities
         public string Content { get; set; }
         public long CommentPictureId { get; set; }
         [ForeignKey("CommentPictureId")]
-        public virtual DbPicture Picture { get; set; }
+        public DbPicture Picture { get; set; }
     }
 }

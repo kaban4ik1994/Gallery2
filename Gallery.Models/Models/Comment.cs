@@ -14,6 +14,6 @@ namespace Gallery.Models.Models
         [JsonProperty("PictureId")]
         public long CommentPictureId { get; set; }
         [JsonProperty("Picture")]
-        public virtual Picture Picture { get; set; }
+        public Picture Picture { get; set; }
     }
 }
