@@ -59,3 +59,16 @@ textarea {
      height: 180px;
  }
  
+ .login-form {
+     margin-top: 20px;
+ }
+
+ .login-form .text-danger {
+     position: absolute;
+     top: 0;
+     color: white;
+ }
+
+ #sidebar {
+     margin-top: 20px;
+ }

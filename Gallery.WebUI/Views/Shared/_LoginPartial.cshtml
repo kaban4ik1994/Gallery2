@@ -22,7 +22,7 @@
 }
 else
 {
-    using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "navbar-form navbar-right", role = "form" }))
+    using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "navbar-form navbar-right login-form", role = "form" }))
     {
         @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
         <div class="form-group">
