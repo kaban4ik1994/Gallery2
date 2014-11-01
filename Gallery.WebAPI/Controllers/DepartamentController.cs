@@ -23,14 +23,14 @@ namespace Gallery.WebAPI.Controllers
         {
             var dbDepartaments = _departamentService.GetDepartaments();
             var departaments = dbDepartaments.Select(Mapper.Map<Departament>).ToList();
-            return Json(JsonConvert.SerializeObject(departaments), new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+            return Json(departaments, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
 
         [HttpGet]
         public IHttpActionResult Get(long id)
         {
             var dbDepartament = _departamentService.GetDepartamentById(id);
-            if (dbDepartament == null) return BadRequest("Painter not found!");
+            if (dbDepartament == null) return BadRequest("Departament not found!");
             var departament = Mapper.Map<Departament>(dbDepartament);
             return Json(departament, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }

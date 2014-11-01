@@ -11,7 +11,6 @@ namespace Gallery.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long DepartamentId { get; set; }
         public string DepartamentName { get; set; }
-        public long DepartamentNumber { get; set; }
         public string DepartamentDescription { get; set; } 
         public ICollection<DbPicture> Picture { get; set; }
     }

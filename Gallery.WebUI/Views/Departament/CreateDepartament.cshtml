@@ -1,0 +1,31 @@
+﻿@model Gallery.WebUI.Models.Departament.DepartamentViewModel
+
+@{
+    ViewBag.Title = "Create Departament";
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-offset-1 title">
+            <h1>@ViewBag.Title</h1>
+        </div>
+
+        <section id="editDepartament-form">
+            @using (Html.BeginForm("CreateDepartament", "Departament", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.EditorForModel()
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        <input type="submit" class="btn-success" value="Submit" />
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

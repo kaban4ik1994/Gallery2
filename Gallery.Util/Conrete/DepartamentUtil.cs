@@ -25,7 +25,7 @@ namespace Gallery.Util.Conrete
             {
                 var result =
                     client.GetAsync(ApiUrl).Result;
-                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<List<Departament>>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<List<Departament>>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
 

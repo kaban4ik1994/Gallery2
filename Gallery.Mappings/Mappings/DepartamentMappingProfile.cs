@@ -19,7 +19,6 @@ namespace Gallery.Mappings.Mappings
             CreateMap<DbDepartament, Departament>()
                 .ForMember(de => de.DepartamentId, options => options.MapFrom(so => so.DepartamentId))
                 .ForMember(de => de.DepartamentName, options => options.MapFrom(so => so.DepartamentName))
-                .ForMember(de => de.DepartamentNumber, options => options.MapFrom(so => so.DepartamentNumber))
                 .ForMember(de => de.DepartamentDescription,
                     options => options.MapFrom(so => so.DepartamentDescription))
                 .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture));
@@ -30,7 +29,6 @@ namespace Gallery.Mappings.Mappings
             CreateMap<Departament, DbDepartament>()
                .ForMember(de => de.DepartamentId, options => options.MapFrom(so => so.DepartamentId))
                .ForMember(de => de.DepartamentName, options => options.MapFrom(so => so.DepartamentName))
-               .ForMember(de => de.DepartamentNumber, options => options.MapFrom(so => so.DepartamentNumber))
                .ForMember(de => de.DepartamentDescription,
                    options => options.MapFrom(so => so.DepartamentDescription))
                .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture));

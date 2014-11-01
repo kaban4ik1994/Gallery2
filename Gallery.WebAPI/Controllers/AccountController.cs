@@ -36,6 +36,7 @@ namespace Gallery.WebAPI.Controllers
         [HttpPut]
         public IHttpActionResult Put(User user)
         {
+            user.UserRoleId = 2;
             var dbUser = Mapper.Map<DbUser>(user);
             _userService.CreateUser(dbUser);
             return Json(Mapper.Map<User>(dbUser), new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });

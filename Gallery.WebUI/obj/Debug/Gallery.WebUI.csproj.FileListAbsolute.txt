@@ -197,3 +197,6 @@ E:\программирование\курс4\1 семестр\курсовой 
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.csprojResolveAssemblyReference.cache
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.dll
 E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\obj\Debug\Gallery.WebUI.pdb
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\AutoMapper.Net4.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\AutoMapper.dll
+E:\программирование\курс4\1 семестр\курсовой проект\Gallery\Gallery.WebUI\bin\AutoMapper.xml

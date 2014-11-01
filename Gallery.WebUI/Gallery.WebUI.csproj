@@ -40,6 +40,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="GridMvc">
       <HintPath>..\packages\Grid.Mvc.3.0.0\lib\net40\GridMvc.dll</HintPath>
     </Reference>
@@ -175,6 +181,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DepartamentController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="CustomAttribute\PageAuthorizeAttribute.cs" />
     <Compile Include="Helpers\ConfigHeper.cs" />
@@ -186,8 +193,8 @@
     </Compile>
     <Compile Include="Helpers\AuthHelper.cs" />
     <Compile Include="Helpers\SecurityHelper.cs" />
+    <Compile Include="Mappings\DepartamentMappingProfile.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
-    <Compile Include="Models\Departament\AddDepartamentViewModel.cs" />
     <Compile Include="Models\Departament\DepartamentViewModel.cs" />
     <Compile Include="Models\Home\CarouselItemViewModel.cs" />
     <Compile Include="Models\Home\PictureViewModel.cs" />
@@ -259,6 +266,9 @@
     <Content Include="Views\Shared\_GridPager.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Departament\Index.cshtml" />
+    <Content Include="Views\Departament\EditDepartament.cshtml" />
+    <Content Include="Views\Departament\CreateDepartament.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -311,6 +321,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

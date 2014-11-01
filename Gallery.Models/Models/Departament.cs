@@ -9,8 +9,6 @@ namespace Gallery.Models.Models
         public long DepartamentId { get; set; }
         [JsonProperty("Name")]
         public string DepartamentName { get; set; }
-        [JsonProperty("Number")]
-        public long DepartamentNumber { get; set; }
         [JsonProperty("Description")]
         public string DepartamentDescription { get; set; } 
         [JsonProperty("Pictures")]

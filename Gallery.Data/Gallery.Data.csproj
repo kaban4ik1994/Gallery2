@@ -72,6 +72,7 @@
     <Compile Include="EntityRepositories\Interface\ITokenRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IUserRepository.cs" />
     <Compile Include="GalleryContext.cs" />
+    <Compile Include="GalleryContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -21,14 +21,11 @@ namespace Gallery.WebUI.Controllers
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                var user = _accountUtil.GetUserByEmailAndPasswordHash(model.Email, SecurityHelper.Hash(model.Password));
-                if (user != null)
-                {
-                    AuthHelper.LogInUser(HttpContext, user.Email);
-                }
-            }
+            if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
+            var user = _accountUtil.GetUserByEmailAndPasswordHash(model.Email, SecurityHelper.Hash(model.Password));
+            if (user == null)
+                return RedirectToAction("Index", "Error");
+            AuthHelper.LogInUser(HttpContext, user.Email);
             return RedirectToAction("Index", "Home");
         }
 
@@ -41,17 +38,16 @@ namespace Gallery.WebUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(RegisterViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                var user = _accountUtil.Registration(new User
-                  {
-                      Email = model.Email,
-                      PasswordHash = SecurityHelper.Hash(model.Password),
-                      UserName = model.UserName
-                  });
-                AuthHelper.LogInUser(HttpContext, user.Email);
-            }
+            if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
+            var user = _accountUtil.Registration(new User
+              {
+                  Email = model.Email,
+                  PasswordHash = SecurityHelper.Hash(model.Password),
+                  UserName = model.UserName
+              });
+            AuthHelper.LogInUser(HttpContext, user.Email);
             return RedirectToAction("Index", "Home");
+
         }
 
         public ActionResult LogOff()
