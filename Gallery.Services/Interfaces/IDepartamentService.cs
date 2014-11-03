@@ -7,6 +7,7 @@ namespace Gallery.Services.Interfaces
     {
         IEnumerable<DbDepartament> GetDepartaments();
         DbDepartament GetDepartamentById(long id);
+        DbDepartament GetDepartamentByName(string name);
         void CreateDepartament(DbDepartament departament);
         void UpdateDepartament(DbDepartament departament);
         void DeleteDepartament(long id);

@@ -7,6 +7,7 @@ namespace Gallery.WebUI.Models.Departament
     {
         [HiddenInput]
         public long Id { get; set; }
+        [Remote("DepartamentExists", "Validation", ErrorMessage = "Departament already exists.")]
         [Required(ErrorMessage = "Fill in the field.")]
         [Display(Name = "Name")]
         public string Name { get; set; }

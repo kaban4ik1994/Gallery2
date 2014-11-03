@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Gallery.Entities;
 
 namespace Gallery.Services.Interfaces
@@ -11,6 +7,7 @@ namespace Gallery.Services.Interfaces
     {
         IEnumerable<DbGenre> GetGenres();
         DbGenre GetGenreById(long id);
+        DbGenre GetGenreByName(string name);
         void CreateGenre(DbGenre genre);
         void UpdateGenre(DbGenre genre);
         void DeleteGenre(long id);

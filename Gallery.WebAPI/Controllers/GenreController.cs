@@ -33,7 +33,16 @@ namespace Gallery.WebAPI.Controllers
         public IHttpActionResult Get(long id)
         {
             var dbGenre = _genreService.GetGenreById(id);
-            if (dbGenre == null) return BadRequest("Painter not found!");
+            if (dbGenre == null) return BadRequest("Genre not found!");
+            var genre = Mapper.Map<Genre>(dbGenre);
+            return Json(genre, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+        }
+
+        [HttpGet]
+        public IHttpActionResult Get(string name)
+        {
+            var dbGenre = _genreService.GetGenreByName(name);
+            if (dbGenre == null) return BadRequest("Genre not found!");
             var genre = Mapper.Map<Genre>(dbGenre);
             return Json(genre, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }

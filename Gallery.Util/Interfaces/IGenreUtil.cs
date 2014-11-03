@@ -8,6 +8,7 @@ namespace Gallery.Util.Interfaces
     {
         IEnumerable<Genre> GetGenres();
         Genre GetGenreById(long id);
+        Genre GetGenreByName(string name);
         Genre CreateGenre(Genre genre);
         Genre UpdateGenre(Genre genre);
         HttpStatusCode DeleteGenre(long id);

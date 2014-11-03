@@ -7,6 +7,7 @@ namespace Gallery.WebUI.Models.Genre
     {
         [HiddenInput]
         public long Id { get; set; }
+        [Remote("GenreExists", "Validation", ErrorMessage = "Genre already exists.")]
         [Required(ErrorMessage = "Fill in the field.")]
         [Display(Name = "Name")]
         public string Name { get; set; }

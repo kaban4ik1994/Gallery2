@@ -35,6 +35,15 @@ namespace Gallery.WebAPI.Controllers
             return Json(departament, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
 
+        [HttpGet]
+        public IHttpActionResult Get(string name)
+        {
+            var dbDepartament = _departamentService.GetDepartamentByName(name);
+            if (dbDepartament == null) return BadRequest("Departament not found!");
+            var departament = Mapper.Map<Departament>(dbDepartament);
+            return Json(departament, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+        }
+
         [HttpPut]
         public IHttpActionResult Put(Departament departament)
         {

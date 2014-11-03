@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Gallery.Data.DBInteractions.Interface;
 using Gallery.Data.EntityRepositories.Interface;
 using Gallery.Entities;
@@ -25,6 +26,12 @@ namespace Gallery.Services.Services
         public DbDepartament GetDepartamentById(long id)
         {
             var departament = _departamentRepository.GetById(id);
+            return departament;
+        }
+
+        public DbDepartament GetDepartamentByName(string name)
+        {
+            var departament = _departamentRepository.GetMany(x => x.DepartamentName == name).FirstOrDefault();
             return departament;
         }
 

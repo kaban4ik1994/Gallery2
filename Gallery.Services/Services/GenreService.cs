@@ -30,6 +30,12 @@ namespace Gallery.Services.Services
             return genre;
         }
 
+        public DbGenre GetGenreByName(string name)
+        {
+            var genre = _genreRepository.GetMany(x => x.GenreName == name).FirstOrDefault();
+            return genre;
+        }
+
         public void CreateGenre(DbGenre genre)
         {
             _genreRepository.Add(genre);

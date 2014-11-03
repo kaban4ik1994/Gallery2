@@ -8,6 +8,7 @@ namespace Gallery.Util.Interfaces
     {
         IEnumerable<Departament> GetDepartaments();
         Departament GetDepartamentById(long id);
+        Departament GetDepartamentByName(string name);
         Departament CreateDepartament(Departament departament);
         Departament UpdateDepartament(Departament departament);
         HttpStatusCode DeleteDepartament(long id);

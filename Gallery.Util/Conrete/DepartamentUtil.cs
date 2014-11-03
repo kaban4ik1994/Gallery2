@@ -6,7 +6,6 @@ using Gallery.Models.Models;
 using Gallery.Util.Helpers;
 using Gallery.Util.Interfaces;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Gallery.Util.Conrete
 {
@@ -36,6 +35,17 @@ namespace Gallery.Util.Conrete
                 var result =
                     client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
                         new Dictionary<string, object> { { "id", id } })).Result;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Departament>(result.Content.ReadAsStringAsync().Result) : null;
+            }
+        }
+
+        public Departament GetDepartamentByName(string name)
+        {
+            using (var client = new HttpClient())
+            {
+                var result =
+                    client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
+                        new Dictionary<string, object> { { "name", name } })).Result;
                 return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Departament>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
