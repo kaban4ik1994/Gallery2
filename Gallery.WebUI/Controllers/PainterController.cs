@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
@@ -7,7 +9,6 @@ using Gallery.Util.Conrete;
 using Gallery.Util.Interfaces;
 using Gallery.WebUI.CustomAttribute;
 using Gallery.WebUI.Helpers;
-using Gallery.WebUI.Models.Genre;
 using Gallery.WebUI.Models.Painter;
 
 namespace Gallery.WebUI.Controllers
@@ -26,6 +27,7 @@ namespace Gallery.WebUI.Controllers
         {
             var genres = _painterUtil.GetPainters();
             var model = genres.Select(Mapper.Map<PainterViewModel>).ToList();
+
             return View(model);
         }
 
@@ -34,20 +36,23 @@ namespace Gallery.WebUI.Controllers
         {
             return View(new PainterViewModel());
         }
+
         [HttpPost]
         public ActionResult CreatePainter(PainterViewModel model, HttpPostedFileBase imageData)
         {
+
             if (!ModelState.IsValid || imageData == null) return RedirectToAction("Index", "Error");
             var genre = Mapper.Map<Painter>(model);
             var tempImage = new Image { ImageData = new byte[imageData.ContentLength] };
             imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
             tempImage.ImageName = imageData.FileName;
+            tempImage.ImageExtension = imageData.ContentType.Split('/').Last();
             using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
             {
                 tempImage.ImageHeight = image.Height;
                 tempImage.ImageWidth = image.Width;
             }
-            genre.Images.Add(tempImage);
+            genre.Images = new List<Image> { tempImage };
             _painterUtil.CreatePainter(genre);
             return RedirectToAction("Index");
         }
@@ -74,6 +79,13 @@ namespace Gallery.WebUI.Controllers
         //{
         //    _genreUtil.DeleteGenre(id);
         //    return RedirectToAction("Index");
+        //}
+
+        //[HttpGet]
+        //public FileContentResult ConvertImageToFileContent(long imageId)
+        //{
+
+        //    return File(System.Text.Encoding.UTF8.GetBytes(imageData), imageName);
         //}
     }
 }

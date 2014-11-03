@@ -8,6 +8,8 @@ namespace Gallery.Models.Models
         public long ImageId { get; set; }
         [JsonProperty("Name")]
         public string ImageName { get; set; }
+        [JsonProperty("Extension")]
+        public string ImageExtension { get; set; }
         [JsonProperty("Url")]
         public byte[] ImageData { get; set; }
         [JsonProperty("Height")]

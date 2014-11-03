@@ -11,6 +11,7 @@ namespace Gallery.Entities
         public long ImageId { get; set; }
         public string ImageName { get; set; }
         public byte[] ImageData { get; set; }
+        public string ImageExtension { get; set; }
         public int ImageHeight { get; set; }
         public int ImageWidth { get; set; }
         public long? ImagePainterId { get; set; }

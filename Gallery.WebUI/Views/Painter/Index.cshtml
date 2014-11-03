@@ -1,0 +1,36 @@
+﻿@using Gallery.Models.Models
+@using Gallery.WebUI.Helpers
+@using GridMvc.Html
+@model IEnumerable<Gallery.WebUI.Models.Painter.PainterViewModel>
+
+@{
+    ViewBag.Title = "Genres";
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-offset-1 title">
+            <h1>@ViewBag.Title</h1>
+        </div>
+        <div class="col-md-offset-1">
+            @Html.ActionLink("Add Painter", "CreatePainter")
+        </div>
+        <div class="col-md-offset-1">
+            @Html.Grid(Model, "_Grid").Columns(
+                columns =>
+                {
+                    columns.Add(foo => foo.Id, true);
+                    columns.Add(foo => foo.Name).Sortable(true).Titled("Name");
+                    columns.Add().Sanitized(false).Encoded(false).Titled("Image").RenderValueAs(foo => String.Format("<img width=\"{0}\" height=\"{1}\" src=\"data:image/{2};base64,{3}\"/>", 75, 75, ImageHelper.FilterImagesByMaxHeightAndMaxWidth(foo.Images, 1000, 1000).ImageExtension, Convert.ToBase64String(ImageHelper.FilterImagesByMaxHeightAndMaxWidth(foo.Images, 1000, 1000).ImageData)));
+                    columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Edit", "EditPainter", new { id = foo.Id }).ToHtmlString());
+                    columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Delete", "DeletePainter", new { id = foo.Id }).ToHtmlString());
+                }).WithPaging(10)
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/gridmvc")
+}

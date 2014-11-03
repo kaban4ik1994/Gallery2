@@ -194,7 +194,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AuthHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
     <Compile Include="Helpers\MenuHelper.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="Mappings\DepartamentMappingProfile.cs" />
     <Compile Include="Mappings\GenreMappingProfile.cs" />
     <Compile Include="Mappings\PainterMappingProfile.cs" />
@@ -280,12 +282,13 @@
     <Content Include="Views\Genre\CreateGenre.cshtml" />
     <Content Include="Views\Genre\EditGenre.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Painter\Index.cshtml" />
+    <Content Include="Views\Painter\CreatePainter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Config\" />
     <Folder Include="Images\Painter\" />
-    <Folder Include="Views\Painter\" />
     <Folder Include="Views\Validation\" />
   </ItemGroup>
   <ItemGroup>

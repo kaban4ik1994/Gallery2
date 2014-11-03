@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Web;
 using System.Web.Mvc;
 using Gallery.Models.Models;
@@ -13,7 +14,7 @@ namespace Gallery.WebUI.Models.Painter
         [Required(ErrorMessage = "Fill in the field.")]
         [Display(Name = "Name")]
         public string Name { get; set; }
-
-        public Image Image { get; set; }
+        public List<Image> Images { get; set; }
+        public FileContentResult FileImage { get; set; }
     }
 }
