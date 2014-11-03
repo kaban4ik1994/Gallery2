@@ -8,6 +8,7 @@ namespace Gallery.Util.Interfaces
     {
         IEnumerable<Painter> GetPainters();
         Painter GetPainterById(long id);
+        Painter GetPainterByName(string name);
         Painter CreatePainter(Painter painter);
         Painter UpdatePainter(Painter painter);
         HttpStatusCode DeletePainter(long id);

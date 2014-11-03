@@ -35,6 +35,7 @@ namespace Gallery.WebUI.Controllers
         [HttpPost]
         public ActionResult CreateDepartament(DepartamentViewModel model)
         {
+            if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
             var departament = Mapper.Map<Departament>(model);
             _departamentUtil.CreateDepartament(departament);
             return RedirectToAction("Index");
@@ -52,6 +53,7 @@ namespace Gallery.WebUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditDepartament(DepartamentViewModel model)
         {
+            if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
             var departament = Mapper.Map<Departament>(model);
             _departamentUtil.UpdateDepartament(departament);
             return RedirectToAction("Index");

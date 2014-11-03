@@ -184,6 +184,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PainterController.cs" />
     <Compile Include="CustomAttribute\PageAuthorizeAttribute.cs" />
     <Compile Include="Helpers\ConfigHeper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -196,6 +197,7 @@
     <Compile Include="Helpers\MenuHelper.cs" />
     <Compile Include="Mappings\DepartamentMappingProfile.cs" />
     <Compile Include="Mappings\GenreMappingProfile.cs" />
+    <Compile Include="Mappings\PainterMappingProfile.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
     <Compile Include="Models\Departament\DepartamentViewModel.cs" />
     <Compile Include="Models\Genre\GenreViewModel.cs" />
@@ -204,6 +206,7 @@
     <Compile Include="Models\Account\RegisterViewModel.cs" />
     <Compile Include="Models\Manage\EditAccountViewModel.cs" />
     <Compile Include="Models\Menu\MenuItem.cs" />
+    <Compile Include="Models\Painter\PainterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -282,6 +285,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Config\" />
     <Folder Include="Images\Painter\" />
+    <Folder Include="Views\Painter\" />
     <Folder Include="Views\Validation\" />
   </ItemGroup>
   <ItemGroup>

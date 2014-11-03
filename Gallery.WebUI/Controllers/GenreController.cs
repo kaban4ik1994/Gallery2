@@ -6,7 +6,6 @@ using Gallery.Util.Conrete;
 using Gallery.Util.Interfaces;
 using Gallery.WebUI.CustomAttribute;
 using Gallery.WebUI.Helpers;
-using Gallery.WebUI.Mappings;
 using Gallery.WebUI.Models.Genre;
 
 namespace Gallery.WebUI.Controllers
@@ -36,6 +35,7 @@ namespace Gallery.WebUI.Controllers
         [HttpPost]
         public ActionResult CreateGenre(GenreViewModel model)
         {
+            if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
             var genre = Mapper.Map<Genre>(model);
             _genreUtil.CreateGenre(genre);
             return RedirectToAction("Index");
@@ -53,6 +53,7 @@ namespace Gallery.WebUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditGenre(GenreViewModel model)
         {
+            if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
             var genre = Mapper.Map<Genre>(model);
             _genreUtil.UpdateGenre(genre);
             return RedirectToAction("Index");

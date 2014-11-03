@@ -25,11 +25,19 @@ namespace Gallery.WebAPI.Controllers
             return Json(painters, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
 
-
         [HttpGet]
         public IHttpActionResult Get(long id)
         {
             var dbPainter = _painterService.GetPainterById(id);
+            if (dbPainter == null) return BadRequest("Painter not found!");
+            var painter = Mapper.Map<Painter>(dbPainter);
+            return Json(painter, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+        }
+
+        [HttpGet]
+        public IHttpActionResult Get(string name)
+        {
+            var dbPainter = _painterService.GetPainterByName(name);
             if (dbPainter == null) return BadRequest("Painter not found!");
             var painter = Mapper.Map<Painter>(dbPainter);
             return Json(painter, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });

@@ -10,12 +10,14 @@ namespace Gallery.WebUI.Controllers
         private readonly IAccountUtil _accountUtil;
         private readonly IDepartamentUtil _departamentUtil;
         private readonly IGenreUtil _genreUtil;
+        private readonly IPainterUtil _painterUtil;
 
         public ValidationController()
         {
             _accountUtil = new AccountUtil(ConfigHeper.AccountApiUrl);
-            _departamentUtil=new DepartamentUtil(ConfigHeper.DepartamentApiUrl);
-            _genreUtil=new GenreUtil(ConfigHeper.GenreApiUrl);
+            _departamentUtil = new DepartamentUtil(ConfigHeper.DepartamentApiUrl);
+            _genreUtil = new GenreUtil(ConfigHeper.GenreApiUrl);
+            _painterUtil = new PainterUtil(ConfigHeper.PainterApiUrl);
         }
 
         public JsonResult EmailExists(string email)
@@ -26,13 +28,19 @@ namespace Gallery.WebUI.Controllers
 
         public JsonResult DepartamentExists(string name)
         {
-            var result =_departamentUtil.GetDepartamentByName(name)  == null;
+            var result = _departamentUtil.GetDepartamentByName(name) == null;
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult GenreExists(string name)
         {
             var result = _genreUtil.GetGenreByName(name) == null;
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult PainterExists(string name)
+        {
+            var result = _painterUtil.GetPainterByName(name) == null;
             return Json(result, JsonRequestBehavior.AllowGet);
         }
     }

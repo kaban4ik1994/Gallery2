@@ -10,7 +10,7 @@ namespace Gallery.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ImageId { get; set; }
         public string ImageName { get; set; }
-        public string ImageUrl { get; set; }
+        public byte[] ImageData { get; set; }
         public int ImageHeight { get; set; }
         public int ImageWidth { get; set; }
         public long? ImagePainterId { get; set; }

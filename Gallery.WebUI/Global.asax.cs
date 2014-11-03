@@ -23,6 +23,7 @@ namespace Gallery.WebUI
             {
                 config.AddProfile<DepartamentMappingProfile>();
                 config.AddProfile<GenreMappingProfile>();
+                config.AddProfile<PainterMappingProfile>();
             }
         );
             Mapper.AssertConfigurationIsValid();

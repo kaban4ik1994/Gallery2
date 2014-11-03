@@ -9,7 +9,7 @@ namespace Gallery.Models.Models
         [JsonProperty("Name")]
         public string ImageName { get; set; }
         [JsonProperty("Url")]
-        public string ImageUrl { get; set; }
+        public byte[] ImageData { get; set; }
         [JsonProperty("Height")]
         public int ImageHeight { get; set; }
         [JsonProperty("Width")]

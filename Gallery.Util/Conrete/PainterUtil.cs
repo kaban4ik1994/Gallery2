@@ -40,6 +40,17 @@ namespace Gallery.Util.Conrete
             }
         }
 
+        public Painter GetPainterByName(string name)
+        {
+            using (var client = new HttpClient())
+            {
+                var result =
+                    client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
+                        new Dictionary<string, object> { { "name", name } })).Result;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Painter>(result.Content.ReadAsStringAsync().Result) : null;
+            }
+        }
+
         public Painter CreatePainter(Painter painter)
         {
             using (var client = new HttpClient())

@@ -11,6 +11,7 @@ namespace Gallery.Services.Services
     public class PainterService : IPainterService
     {
         private readonly IPainterRepository _painterRepository;
+        private readonly IImageRepository _imageRepository;
         private readonly IUnitOfWork _unitOfWork;
 
         public PainterService(IPainterRepository painterRepository, IUnitOfWork unitOfWork)
@@ -20,14 +21,21 @@ namespace Gallery.Services.Services
         }
         public IEnumerable<DbPainter> GetPainters()
         {
-            var painters = _painterRepository.GetAll();
+            var painters = _painterRepository.GetAll().Include(x => x.Images);
             return painters;
         }
 
         public DbPainter GetPainterById(long id)
         {
-            var painter = _painterRepository.GetMany(x => x.PainterId == id).Include(x => x.Images).Include(x => x.Pictures).FirstOrDefault();
+            var painter = _painterRepository.GetMany(x => x.PainterId == id).Include(x => x.Images).FirstOrDefault();
             return painter;
+        }
+
+        public DbPainter GetPainterByName(string name)
+        {
+            var painter = _painterRepository.GetMany(x => x.PainterFullName == name).FirstOrDefault();
+            return painter;
+
         }
 
         public void CreatePainter(DbPainter painter)
