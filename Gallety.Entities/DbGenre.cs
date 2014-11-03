@@ -10,7 +10,7 @@ namespace Gallery.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long GenreId { get; set; }
-        public long GenreName { get; set; }
+        public string GenreName { get; set; }
         public ICollection<DbPicture> Pictures { get; set; }
     }
 }

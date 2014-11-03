@@ -1,0 +1,33 @@
+﻿@using GridMvc.Html
+@model IEnumerable<Gallery.WebUI.Models.Genre.GenreViewModel>
+
+@{
+    ViewBag.Title = "Genres";
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-offset-1 title">
+            <h1>@ViewBag.Title</h1>
+        </div>
+        <div class="col-md-offset-1">
+            @Html.ActionLink("Add Genre", "CreateGenre")
+        </div>
+        <div class="col-md-offset-1">
+            @Html.Grid(Model, "_Grid").Columns(
+                columns =>
+                {
+                    columns.Add(foo => foo.Id, true);
+                    columns.Add(foo => foo.Name).Sortable(true).Titled("Name");
+                    columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Edit", "EditGenre", new { id = foo.Id }).ToHtmlString());
+                    columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Delete", "DeleteGenre", new { id = foo.Id }).ToHtmlString());
+                }).WithPaging(20)
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/gridmvc")
+}

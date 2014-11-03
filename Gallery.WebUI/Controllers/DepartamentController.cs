@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
 using AutoMapper;
 using Gallery.Models.Models;
@@ -11,6 +10,7 @@ using Gallery.WebUI.Models.Departament;
 
 namespace Gallery.WebUI.Controllers
 {
+    [PageAuthorize(UserRoles = "admin")]
     public class DepartamentController : Controller
     {
         private readonly IDepartamentUtil _departamentUtil;
@@ -20,7 +20,6 @@ namespace Gallery.WebUI.Controllers
             _departamentUtil = new DepartamentUtil(ConfigHeper.DepartamentApiUrl);
         }
 
-        [PageAuthorize(UserRoles = "admin")]
         public ActionResult Index()
         {
             var departaments = _departamentUtil.GetDepartaments();

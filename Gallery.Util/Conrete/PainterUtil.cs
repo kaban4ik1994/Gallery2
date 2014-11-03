@@ -25,7 +25,7 @@ namespace Gallery.Util.Conrete
             {
                 var result =
                     client.GetAsync(ApiUrl).Result;
-                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<IEnumerable<Painter>>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<List<Painter>>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
 
@@ -36,7 +36,7 @@ namespace Gallery.Util.Conrete
                 var result =
                     client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
                         new Dictionary<string, object> { { "id", id } })).Result;
-                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Painter>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Painter>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
 
@@ -46,7 +46,7 @@ namespace Gallery.Util.Conrete
             {
                 var result =
                     client.PutAsync(ApiUrl, new StringContent(JsonConvert.SerializeObject(painter), Encoding.UTF8, "application/json")).Result;
-                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Painter>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Painter>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
 
@@ -56,7 +56,7 @@ namespace Gallery.Util.Conrete
             {
                 var result =
                     client.PostAsync(ApiUrl, new StringContent(JsonConvert.SerializeObject(painter), Encoding.UTF8, "application/json")).Result;
-                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Painter>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Painter>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
 

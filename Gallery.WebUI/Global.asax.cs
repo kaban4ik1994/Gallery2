@@ -22,6 +22,7 @@ namespace Gallery.WebUI
             Mapper.Initialize(config =>
             {
                 config.AddProfile<DepartamentMappingProfile>();
+                config.AddProfile<GenreMappingProfile>();
             }
         );
             Mapper.AssertConfigurationIsValid();

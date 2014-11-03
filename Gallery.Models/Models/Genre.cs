@@ -8,7 +8,7 @@ namespace Gallery.Models.Models
         [JsonProperty("Id")]
         public long GenreId { get; set; }
         [JsonProperty("Name")]
-        public long GenreName { get; set; }
+        public string GenreName { get; set; }
         [JsonProperty("Pictures")]
         public ICollection<Picture> Pictures { get; set; } 
     }

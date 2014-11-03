@@ -6,7 +6,6 @@ using Gallery.Models.Models;
 using Gallery.Util.Helpers;
 using Gallery.Util.Interfaces;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Gallery.Util.Conrete
 {
@@ -26,7 +25,7 @@ namespace Gallery.Util.Conrete
                 var result =
                     client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
                         new Dictionary<string, object> { { "email", email } })).Result;
-                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
 
@@ -37,7 +36,7 @@ namespace Gallery.Util.Conrete
                 var result =
                     client.GetAsync(RequestHelper.GenerateRequestUrl(ApiUrl,
                         new Dictionary<string, object> { { "email", email }, { "passwordHash", passwordHash } })).Result;
-                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
 
@@ -47,7 +46,7 @@ namespace Gallery.Util.Conrete
             {
                 var result =
                     client.PutAsync(ApiUrl, new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json")).Result;
-                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
 
@@ -57,7 +56,7 @@ namespace Gallery.Util.Conrete
             {
                 var result =
                     client.PostAsync(ApiUrl, new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json")).Result;
-                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(JObject.Parse(result.Content.ReadAsStringAsync().Result).ToString()) : null;
+                return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<User>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
 
