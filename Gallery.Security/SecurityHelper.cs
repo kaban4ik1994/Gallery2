@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Gallery.WebUI.Helpers
+namespace Gallery.Security
 {
     public static class SecurityHelper
     {

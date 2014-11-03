@@ -193,7 +193,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AuthHelper.cs" />
-    <Compile Include="Helpers\SecurityHelper.cs" />
     <Compile Include="Mappings\DepartamentMappingProfile.cs" />
     <Compile Include="Mappings\GenreMappingProfile.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
@@ -293,6 +292,10 @@
     <ProjectReference Include="..\Gallery.Models\Gallery.Models.csproj">
       <Project>{6ea8ffff-fede-4496-901e-7df9ce838f73}</Project>
       <Name>Gallery.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gallery.Security\Gallery.Security.csproj">
+      <Project>{a6e3a6d5-d125-4d91-9d83-c4cdee5b8c8c}</Project>
+      <Name>Gallery.Security</Name>
     </ProjectReference>
     <ProjectReference Include="..\Gallery.Util\Gallery.Util.csproj">
       <Project>{d3507586-82db-4f7d-bd8b-089f2db565b9}</Project>

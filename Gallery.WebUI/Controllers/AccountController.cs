@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Gallery.Models.Models;
+using Gallery.Security;
 using Gallery.Util.Conrete;
 using Gallery.WebUI.Helpers;
 using Gallery.WebUI.Models.Account;
