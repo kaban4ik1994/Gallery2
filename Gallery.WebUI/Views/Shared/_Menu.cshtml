@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Gallery.WebUI.Models.Menu.MenuItem>
+
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+    <div class="list-group">
+
+        @foreach (var item in Model)
+        {
+            @Html.ActionLink(item.Item, "Index", "Home", new { departament = item.Item }, new { @class = String.Format("{0} {1}", "list-group-item", ViewBag.ActiveItem == item.Item ? "active" : "") })
+        }
+    </div>
+</div>

@@ -1,4 +1,6 @@
-﻿@using Gallery.WebUI.Models.Account
+﻿@using Gallery.Util.Conrete
+@using Gallery.WebUI.Helpers
+@using Gallery.WebUI.Models.Account
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +12,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <!--header-->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -26,6 +29,8 @@
             </div>
         </div>
     </div>
+    <!--/header-->
+    <!--content-->
     <div class="container">
         <div class="row row-offcanvas row-offcanvas-right">
             <div class="col-xs-12 col-sm-9">
@@ -34,29 +39,17 @@
                 </p>
                 @RenderBody()
             </div><!--/span-->
-            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">Link</a>
-                    <a href="#" class="list-group-item">Link</a>
-                    <a href="#" class="list-group-item">Link</a>
-                    <a href="#" class="list-group-item">Link</a>
-                    <a href="#" class="list-group-item">Link</a>
-                    <a href="#" class="list-group-item">Link</a>
-                    <a href="#" class="list-group-item">Link</a>
-                    <a href="#" class="list-group-item">Link</a>
-                    <a href="#" class="list-group-item">Link</a>
-                    <a href="#" class="list-group-item">Link</a>
-                </div>
-            </div><!--/span-->
+            @Html.Partial("_Menu", MenuHelper.GetMenuItems(new DepartamentUtil(ConfigHeper.DepartamentApiUrl)))
         </div><!--/row-->
-
+        <!--/content-->
         <hr>
 
-        <footer>
-            <p>&copy; Курсовой проект 2014</p>
-        </footer>
+        
 
     </div><!--/.container-->
+    <footer>
+        <p>&copy; Курсовой проект 2014</p>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", false)
