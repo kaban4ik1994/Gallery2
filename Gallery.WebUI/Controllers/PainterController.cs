@@ -71,9 +71,10 @@ namespace Gallery.WebUI.Controllers
         {
             if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
             var painter = Mapper.Map<Painter>(model);
+            painter.Images = _painterUtil.GetPainterById(model.Id).Images;
             if (imageData != null)
             {
-                var tempImage = new Image {ImageData = new byte[imageData.ContentLength]};
+                var tempImage = new Image { ImageData = new byte[imageData.ContentLength] };
                 imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
                 tempImage.ImageName = imageData.FileName;
                 using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
@@ -81,7 +82,11 @@ namespace Gallery.WebUI.Controllers
                     tempImage.ImageHeight = image.Height;
                     tempImage.ImageWidth = image.Width;
                 }
-                painter.Images = new List<Image> {tempImage};
+
+                painter.Images.First().ImageData = tempImage.ImageData;
+                painter.Images.First().ImageName = tempImage.ImageName;
+                painter.Images.First().ImageWidth = tempImage.ImageWidth;
+                painter.Images.First().ImageHeight = tempImage.ImageHeight;
             }
             _painterUtil.UpdatePainter(painter);
             return RedirectToAction("Index");
