@@ -46,7 +46,6 @@ namespace Gallery.WebUI.Controllers
             var tempImage = new Image { ImageData = new byte[imageData.ContentLength] };
             imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
             tempImage.ImageName = imageData.FileName;
-            tempImage.ImageExtension = imageData.ContentType.Split('/').Last();
             using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
             {
                 tempImage.ImageHeight = image.Height;
@@ -74,12 +73,12 @@ namespace Gallery.WebUI.Controllers
         //    return RedirectToAction("Index");
         //}
 
-        //[HttpGet]
-        //public ActionResult DeleteGenre(long id)
-        //{
-        //    _genreUtil.DeleteGenre(id);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpGet]
+        public ActionResult DeletePainter(long id)
+        {
+            _painterUtil.DeletePainter(id);
+            return RedirectToAction("Index");
+        }
 
         //[HttpGet]
         //public FileContentResult ConvertImageToFileContent(long imageId)

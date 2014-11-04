@@ -7,6 +7,11 @@ namespace Gallery.Entities
     [Table("Painters")]
     public class DbPainter
     {
+        public DbPainter()
+        {
+            Images=new List<DbImage>();
+            Pictures=new List<DbPicture>();
+        }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long PainterId { get; set; }

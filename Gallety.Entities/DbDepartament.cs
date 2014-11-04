@@ -7,6 +7,10 @@ namespace Gallery.Entities
     [Table("Departaments")]
     public class DbDepartament
     {
+        public DbDepartament()
+        {
+            Picture=new List<DbPicture>();
+        }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long DepartamentId { get; set; }

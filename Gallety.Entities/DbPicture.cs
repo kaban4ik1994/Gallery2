@@ -7,6 +7,11 @@ namespace Gallery.Entities
     [Table("Pictures")]
     public class DbPicture
     {
+        public DbPicture()
+        {
+            Comments=new List<DbComment>();
+            Images=new List<DbImage>();
+        }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long PictureId { get; set; }

@@ -7,6 +7,10 @@ namespace Gallery.Entities
     [Table("Genres")]
     public class DbGenre
     {
+        public DbGenre()
+        {
+            Pictures=new List<DbPicture>();
+        }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long GenreId { get; set; }
