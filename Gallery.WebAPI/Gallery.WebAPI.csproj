@@ -145,6 +145,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ImageConverterHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +168,10 @@
     <ProjectReference Include="..\Gallery.Data\Gallery.Data.csproj">
       <Project>{2248bd43-19a0-4936-9a99-200447374f8d}</Project>
       <Name>Gallery.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gallery.ImageConverter\Gallery.ImageConverter.csproj">
+      <Project>{33bde287-afe0-47d3-aebc-e24c9d56556d}</Project>
+      <Name>Gallery.ImageConverter</Name>
     </ProjectReference>
     <ProjectReference Include="..\Gallery.Mappings\Gallery.Mappings.csproj">
       <Project>{90e91880-dca4-40b2-95fd-6b7422b76dd9}</Project>

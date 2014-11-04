@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Util", "Gallery.Uti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Security", "Gallery.Security\Gallery.Security.csproj", "{A6E3A6D5-D125-4D91-9D83-C4CDEE5B8C8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.ImageConverter", "Gallery.ImageConverter\Gallery.ImageConverter.csproj", "{33BDE287-AFE0-47D3-AEBC-E24C9D56556D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{A6E3A6D5-D125-4D91-9D83-C4CDEE5B8C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6E3A6D5-D125-4D91-9D83-C4CDEE5B8C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6E3A6D5-D125-4D91-9D83-C4CDEE5B8C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BDE287-AFE0-47D3-AEBC-E24C9D56556D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BDE287-AFE0-47D3-AEBC-E24C9D56556D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BDE287-AFE0-47D3-AEBC-E24C9D56556D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BDE287-AFE0-47D3-AEBC-E24C9D56556D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

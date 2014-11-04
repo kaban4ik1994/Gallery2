@@ -202,3 +202,5 @@ D:\Dev\Gallery\Gallery2\Gallery.WebAPI\bin\System.Web.Mvc.xml
 D:\Dev\Gallery\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.csprojResolveAssemblyReference.cache
 D:\Dev\Gallery\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.dll
 D:\Dev\Gallery\Gallery2\Gallery.WebAPI\obj\Debug\Gallery.WebAPI.pdb
+D:\Dev\Gallery\Gallery2\Gallery.WebAPI\bin\Gallery.ImageConverter.dll
+D:\Dev\Gallery\Gallery2\Gallery.WebAPI\bin\Gallery.ImageConverter.pdb

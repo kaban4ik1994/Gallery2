@@ -14,7 +14,7 @@ namespace Gallery.WebUI.Models.Painter
         [Required(ErrorMessage = "Fill in the field.")]
         [Display(Name = "Name")]
         public string Name { get; set; }
-        public List<Image> Images { get; set; }
+        public List<Gallery.Models.Models.Image> Images { get; set; }
         public FileContentResult FileImage { get; set; }
     }
 }

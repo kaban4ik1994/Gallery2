@@ -7,10 +7,10 @@ namespace Gallery.WebUI.Helpers
 {
     public static class ImageHelper
     {
-        public static Image FilterImagesByMaxHeightAndMaxWidth(IEnumerable<Image> images, int maxHeight,
+        public static Image FilterImagesByMaxHeightAndMaxWidth(List<Image> images, int maxHeight,
             int maxWidth)
         {
-            var image = images.FirstOrDefault(x => x.ImageHeight < maxHeight && x.ImageWidth < maxWidth);
+            var image = images.FirstOrDefault(x => x.ImageHeight <= maxHeight && x.ImageWidth <= maxWidth);
             return image;
         }
     }
