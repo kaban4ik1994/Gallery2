@@ -45,6 +45,7 @@ namespace Gallery.WebUI.Controllers
         public ActionResult EditDepartament(long id)
         {
             var departament = _departamentUtil.GetDepartamentById(id);
+            if (departament == null) return RedirectToAction("Index", "Error");
             var model = Mapper.Map<DepartamentViewModel>(departament);
             return View(model);
         }

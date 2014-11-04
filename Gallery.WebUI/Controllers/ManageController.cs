@@ -7,6 +7,7 @@ using Gallery.WebUI.Models.Manage;
 
 namespace Gallery.WebUI.Controllers
 {
+    [PageAuthorize(UserRoles = "user,admin")]
     public class ManageController : Controller
     {
         private readonly IAccountUtil _accountUtil;
@@ -16,7 +17,6 @@ namespace Gallery.WebUI.Controllers
             _accountUtil = new AccountUtil(ConfigHeper.AccountApiUrl);
         }
 
-        [PageAuthorize(UserRoles = "user,admin")]
         public ActionResult EditAccount()
         {
             var user = AuthHelper.GetUser(HttpContext, _accountUtil);
@@ -26,7 +26,6 @@ namespace Gallery.WebUI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [PageAuthorize(UserRoles = "user,admin")]
         public ActionResult EditAccount(EditAccountViewModel editAccountViewModel)
         {
             if (ModelState.IsValid)

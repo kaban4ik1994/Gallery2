@@ -26,21 +26,24 @@ namespace Gallery.WebUI.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult DepartamentExists(string name)
+        public JsonResult DepartamentExists(long id, string name)
         {
-            var result = _departamentUtil.GetDepartamentByName(name) == null;
+            var departament = _departamentUtil.GetDepartamentByName(name);
+            var result = departament == null || departament.DepartamentId == id;
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult GenreExists(string name)
+        public JsonResult GenreExists(long id, string name)
         {
-            var result = _genreUtil.GetGenreByName(name) == null;
+            var genre = _genreUtil.GetGenreByName(name);
+            var result = genre == null || genre.GenreId == id;
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult PainterExists(string name)
+        public JsonResult PainterExists(long id, string name)
         {
-            var result = _painterUtil.GetPainterByName(name) == null;
+            var painter = _painterUtil.GetPainterByName(name);
+            var result = painter == null || painter.PainterId == id;
             return Json(result, JsonRequestBehavior.AllowGet);
         }
     }

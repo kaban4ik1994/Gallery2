@@ -45,6 +45,7 @@ namespace Gallery.WebUI.Controllers
         public ActionResult EditGenre(long id)
         {
             var genre = _genreUtil.GetGenreById(id);
+            if (genre == null) return RedirectToAction("Index", "Error");
             var model = Mapper.Map<GenreViewModel>(genre);
             return View(model);
         }

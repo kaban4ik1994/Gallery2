@@ -25,8 +25,8 @@ namespace Gallery.WebUI.Controllers
         // GET: Genre
         public ActionResult Index()
         {
-            var genres = _painterUtil.GetPainters();
-            var model = genres.Select(Mapper.Map<PainterViewModel>).ToList();
+            var painters = _painterUtil.GetPainters();
+            var model = painters.Select(Mapper.Map<PainterViewModel>).ToList();
 
             return View(model);
         }
@@ -42,7 +42,7 @@ namespace Gallery.WebUI.Controllers
         {
 
             if (!ModelState.IsValid || imageData == null) return RedirectToAction("Index", "Error");
-            var genre = Mapper.Map<Painter>(model);
+            var painter = Mapper.Map<Painter>(model);
             var tempImage = new Image { ImageData = new byte[imageData.ContentLength] };
             imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
             tempImage.ImageName = imageData.FileName;
@@ -51,27 +51,41 @@ namespace Gallery.WebUI.Controllers
                 tempImage.ImageHeight = image.Height;
                 tempImage.ImageWidth = image.Width;
             }
-            genre.Images = new List<Image> { tempImage };
-            _painterUtil.CreatePainter(genre);
+            painter.Images = new List<Image> { tempImage };
+            _painterUtil.CreatePainter(painter);
             return RedirectToAction("Index");
         }
 
-        //[HttpGet]
-        //public ActionResult EditGenre(long id)
-        //{
-        //    var genre = _genreUtil.GetGenreById(id);
-        //    var model = Mapper.Map<GenreViewModel>(genre);
-        //    return View(model);
-        //}
+        [HttpGet]
+        public ActionResult EditPainter(long id)
+        {
+            var painter = _painterUtil.GetPainterById(id);
+            if (painter == null) return RedirectToAction("Index", "Error");
+            var model = Mapper.Map<PainterViewModel>(painter);
+            return View(model);
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult EditGenre(GenreViewModel model)
-        //{
-        //    var genre = Mapper.Map<Genre>(model);
-        //    _genreUtil.UpdateGenre(genre);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditPainter(PainterViewModel model, HttpPostedFileBase imageData)
+        {
+            if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
+            var painter = Mapper.Map<Painter>(model);
+            if (imageData != null)
+            {
+                var tempImage = new Image {ImageData = new byte[imageData.ContentLength]};
+                imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
+                tempImage.ImageName = imageData.FileName;
+                using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
+                {
+                    tempImage.ImageHeight = image.Height;
+                    tempImage.ImageWidth = image.Width;
+                }
+                painter.Images = new List<Image> {tempImage};
+            }
+            _painterUtil.UpdatePainter(painter);
+            return RedirectToAction("Index");
+        }
 
         [HttpGet]
         public ActionResult DeletePainter(long id)
@@ -79,12 +93,5 @@ namespace Gallery.WebUI.Controllers
             _painterUtil.DeletePainter(id);
             return RedirectToAction("Index");
         }
-
-        //[HttpGet]
-        //public FileContentResult ConvertImageToFileContent(long imageId)
-        //{
-
-        //    return File(System.Text.Encoding.UTF8.GetBytes(imageData), imageName);
-        //}
     }
 }

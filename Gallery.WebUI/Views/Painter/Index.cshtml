@@ -4,7 +4,7 @@
 @model IEnumerable<Gallery.WebUI.Models.Painter.PainterViewModel>
 
 @{
-    ViewBag.Title = "Genres";
+    ViewBag.Title = "Painters ";
 }
 
 <div class="row">
@@ -13,7 +13,7 @@
         <div class="col-md-offset-1 title">
             <h1>@ViewBag.Title</h1>
         </div>
-        <div class="col-md-offset-1">
+        <div class="col-md-offset-1">   
             @Html.ActionLink("Add Painter", "CreatePainter")
         </div>
         <div class="col-md-offset-1">

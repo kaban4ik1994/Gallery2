@@ -31,8 +31,7 @@ namespace Gallery.WebUI.Mappings
             CreateMap<Painter, PainterViewModel>()
                 .ForMember(de => de.Id, options => options.MapFrom(so => so.PainterId))
                 .ForMember(de => de.Name, options => options.MapFrom(so => so.PainterFullName))
-                .ForMember(de => de.Images, options => options.MapFrom(so => so.Images))
-                .ForMember(de => de.FileImage, options => options.Ignore());
+                .ForMember(de => de.Images, options => options.MapFrom(so => so.Images));
         }
     }
 }

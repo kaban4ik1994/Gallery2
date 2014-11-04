@@ -16,6 +16,7 @@ namespace Gallery.WebAPI.Controllers
         public PainterController(IPainterService painterService)
         {
             _painterService = painterService;
+
         }
 
         [HttpGet]
@@ -73,19 +74,22 @@ namespace Gallery.WebAPI.Controllers
 
             var origImage = painter.Images.First();
             if (origImage == null) return BadRequest("Error!");
-            var imageExtension =
-    ImageConverter.ImageConverter.GetImageFormat(
-        ImageConverter.ImageConverter.ByteArrayToImage(origImage.ImageData)).ToString();
-            origImage.ImageExtension = imageExtension;
-            var newImage100X100 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "100X100",
-                imageExtension, 100, 100);
-            var newImage300X300 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "300X300",
-               imageExtension, 300, 300);
-            var newImage700X700 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "700X700",
-               imageExtension, 700, 700);
-            painter.Images.Add(newImage100X100);
-            painter.Images.Add(newImage300X300);
-            painter.Images.Add(newImage700X700);
+            if (painter.Images.Count <= 1)
+            {
+                var imageExtension =
+                    ImageConverter.ImageConverter.GetImageFormat(
+                        ImageConverter.ImageConverter.ByteArrayToImage(origImage.ImageData)).ToString();
+                origImage.ImageExtension = imageExtension;
+                var newImage100X100 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "100X100",
+                    imageExtension, 100, 100);
+                var newImage300X300 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "300X300",
+                    imageExtension, 300, 300);
+                var newImage700X700 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "700X700",
+                    imageExtension, 700, 700);
+                painter.Images.Add(newImage100X100);
+                painter.Images.Add(newImage300X300);
+                painter.Images.Add(newImage700X700);
+            }
             var dbPainter = Mapper.Map<DbPainter>(painter);
             _painterService.UpdatePainter(dbPainter);
             return Json(Mapper.Map<Painter>(dbPainter), new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
