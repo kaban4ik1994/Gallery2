@@ -7,7 +7,7 @@ namespace Gallery.ImageConverter
 {
     public static class ImageConverter
     {
-        public static byte[] ResizeImage(byte[] origFile, int nWidth, int nHeight)
+        public static Image ResizeImage(byte[] origFile, int nWidth, int nHeight)
         {
             var image = ByteArrayToImage(origFile);
             int newWidth, newHeight;
@@ -33,7 +33,7 @@ namespace Gallery.ImageConverter
                 g.DrawImage(image, 0, 0, newWidth, newHeight);
                 g.Dispose();
             }
-            return ImageToByteArray(result);
+            return result;
         }
 
         public static Image ByteArrayToImage(byte[] byteArrayIn)

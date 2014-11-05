@@ -21,7 +21,7 @@
                 @Html.EditorFor(x => x.Name)
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
-                        @Html.Partial("ImageSummary", new ImageViewModel { Width = 300, Height = 400, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(Model.Images, 300, 300, 400, 400) })
+                        @Html.Partial("ImageSummary", new ImageViewModel { Width = 300, Height = 400, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(Model.Images, 200, 200, 400, 400) })
                     </div>
                 </div>
 

@@ -7,13 +7,13 @@ namespace Gallery.WebAPI.Helpers
     {
         public static Image ResizeImage(Image image,  string nFileName, string imageExtension, int nWidth, int nHeight)
         {
-            var bytes = ImageConverter.ImageConverter.ResizeImage(image.ImageData, nWidth, nHeight);
+            var nImage = ImageConverter.ImageConverter.ResizeImage(image.ImageData, nWidth, nHeight);
             var result = new Image
             {
-                ImageData = bytes,
+                ImageData = ImageConverter.ImageConverter.ImageToByteArray(nImage),
                 ImageExtension = imageExtension,
-                ImageHeight = nHeight,
-                ImageWidth = nWidth,
+                ImageHeight = nImage.Height,
+                ImageWidth = nImage.Width,
                 ImageName = nFileName
             };
             return result;

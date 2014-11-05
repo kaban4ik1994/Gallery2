@@ -9,7 +9,8 @@ namespace Gallery.WebUI.Helpers
         public static Image FilterImagesByMaxHeightAndMaxWidth(List<Image> images, int minHeight,
             int minWidth, int maxHeight, int maxWidth)
         {
-            var image = images.FirstOrDefault(x => x.ImageHeight >= minHeight && x.ImageHeight <= maxHeight && x.ImageWidth >= minWidth && x.ImageWidth <= maxWidth);
+            var image = images.FirstOrDefault(x => x.ImageHeight >= minHeight && x.ImageHeight <= maxHeight && x.ImageWidth >= minWidth && x.ImageWidth <= maxWidth) ??
+                        images.Last();
             return image;
         }
     }

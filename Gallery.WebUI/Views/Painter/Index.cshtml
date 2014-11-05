@@ -22,7 +22,7 @@
                 {
                     columns.Add(foo => foo.Id, true);
                     columns.Add(foo => foo.Name).Sortable(true).Titled("Name");
-                    columns.Add().Sanitized(false).Encoded(false).Titled("Image").RenderValueAs(foo => Html.Partial("ImageSummary", new ImageViewModel { Width = 75, Height = 90, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(foo.Images, 100, 100, 200, 200) }).ToHtmlString());
+                    columns.Add().Sanitized(false).Encoded(false).Titled("Image").RenderValueAs(foo => Html.Partial("ImageSummary", new ImageViewModel { Width = 75, Height = 90, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(foo.Images, 50, 50, 200, 200) }).ToHtmlString());
                     columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Edit", "EditPainter", new { id = foo.Id }).ToHtmlString());
                     columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Delete", "DeletePainter", new { id = foo.Id }).ToHtmlString());
                 }).WithPaging(10)

@@ -57,11 +57,11 @@ namespace Gallery.WebAPI.Controllers
     ImageConverter.ImageConverter.GetImageFormat(
         ImageConverter.ImageConverter.ByteArrayToImage(origImage.ImageData)).ToString();
             origImage.ImageExtension = imageExtension;
-            var newImage100X100 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "100X100",
+            var newImage100X100 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "1",
                 imageExtension, 100, 100);
-            var newImage300X300 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "300X300",
+            var newImage300X300 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "2",
                imageExtension, 300, 300);
-            var newImage700X700 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "700X700",
+            var newImage700X700 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "3",
                imageExtension, 700, 700);
             painter.Images.Add(newImage100X100);
             painter.Images.Add(newImage300X300);
@@ -82,11 +82,11 @@ namespace Gallery.WebAPI.Controllers
                  ImageConverter.ImageConverter.GetImageFormat(
                      ImageConverter.ImageConverter.ByteArrayToImage(origImage.ImageData)).ToString();
             origImage.ImageExtension = imageExtension;
-            var newImage100X100 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "100X100",
+            var newImage100X100 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "1",
                 imageExtension, 100, 100);
-            var newImage300X300 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "300X300",
+            var newImage300X300 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "2",
                 imageExtension, 300, 300);
-            var newImage700X700 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "700X700",
+            var newImage700X700 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "3",
                 imageExtension, 700, 700);
 
             dbPainter.Images.ElementAt(0).ImageData = origImage.ImageData;
