@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using System.Web.Mvc;
 using Gallery.WebUI.Models.Home;
 

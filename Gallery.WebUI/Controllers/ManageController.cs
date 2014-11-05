@@ -28,14 +28,11 @@ namespace Gallery.WebUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditAccount(EditAccountViewModel editAccountViewModel)
         {
-            if (ModelState.IsValid)
-            {
-                var user = AuthHelper.GetUser(HttpContext, _accountUtil);
-                user.UserName = editAccountViewModel.UserName;
-                _accountUtil.UpdateUser(user);
-                return RedirectToAction("Index", "Home");
-            }
-            return View(editAccountViewModel);
+            if (!ModelState.IsValid) return View(editAccountViewModel);
+            var user = AuthHelper.GetUser(HttpContext, _accountUtil);
+            user.UserName = editAccountViewModel.UserName;
+            _accountUtil.UpdateUser(user);
+            return RedirectToAction("Index", "Home");
         }
     }
 }

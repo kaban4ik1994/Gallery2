@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using Gallery.Data.DBInteractions.Interface;
 using Gallery.Data.EntityRepositories.Interface;
 using Gallery.Entities;
@@ -18,13 +20,19 @@ namespace Gallery.Services.Services
         }
         public IEnumerable<DbPicture> GetPictures()
         {
-            var pictures = _pictureRepository.GetAll();
+            var pictures = _pictureRepository.GetAll().Include(x => x.Images);
             return pictures;
         }
 
         public DbPicture GetPictureById(long id)
         {
-            var picture = _pictureRepository.GetById(id);
+            var picture = _pictureRepository.GetMany(x => x.PictureId == id).Include(x => x.Genre).Include(x => x.Painter).Include(x => x.DbDepartament).Include(x => x.Comments).FirstOrDefault();
+            return picture;
+        }
+
+        public DbPicture GetPictureByName(string name)
+        {
+            var picture = _pictureRepository.GetMany(x => x.PictureName == name).FirstOrDefault();
             return picture;
         }
 
@@ -36,7 +44,7 @@ namespace Gallery.Services.Services
 
         public void UpdatePicture(DbPicture picture)
         {
-           _pictureRepository.Update(picture);
+            _pictureRepository.Update(picture);
         }
 
         public void DeletePicture(long id)

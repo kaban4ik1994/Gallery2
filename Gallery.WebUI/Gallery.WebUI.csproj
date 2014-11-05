@@ -187,6 +187,7 @@
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PainterController.cs" />
+    <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="CustomAttribute\PageAuthorizeAttribute.cs" />
     <Compile Include="Helpers\ConfigHeper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -290,6 +291,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Config\" />
+    <Folder Include="Views\Picture\" />
     <Folder Include="Views\Validation\" />
   </ItemGroup>
   <ItemGroup>

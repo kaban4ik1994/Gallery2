@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -62,6 +61,7 @@ namespace Gallery.WebUI.Controllers
             var painter = _painterUtil.GetPainterById(id);
             if (painter == null) return RedirectToAction("Index", "Error");
             var model = Mapper.Map<PainterViewModel>(painter);
+            TempData["Images"] = model.Images;
             return View(model);
         }
 
@@ -71,13 +71,13 @@ namespace Gallery.WebUI.Controllers
         {
             if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
             var painter = Mapper.Map<Painter>(model);
-            painter.Images = _painterUtil.GetPainterById(model.Id).Images;
+            painter.Images =(List<Image>)TempData["Images"];
             if (imageData != null)
             {
                 var tempImage = new Image { ImageData = new byte[imageData.ContentLength] };
                 imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
                 tempImage.ImageName = imageData.FileName;
-                using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
+                using (var image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
                 {
                     tempImage.ImageHeight = image.Height;
                     tempImage.ImageWidth = image.Width;

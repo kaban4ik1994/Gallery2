@@ -113,11 +113,6 @@ namespace Gallery.WebAPI.Controllers
             dbPainter.Images.ElementAt(3).ImageWidth = newImage700X700.ImageWidth;
             dbPainter.Images.ElementAt(3).ImageName = newImage700X700.ImageName;
 
-            _imageService.UpdateImage(dbPainter.Images.ElementAt(0));
-            _imageService.UpdateImage(dbPainter.Images.ElementAt(1));
-            _imageService.UpdateImage(dbPainter.Images.ElementAt(2));
-            _imageService.UpdateImage(dbPainter.Images.ElementAt(3));
-
             _painterService.UpdatePainter(dbPainter);
             return Json(Mapper.Map<Painter>(dbPainter), new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
 

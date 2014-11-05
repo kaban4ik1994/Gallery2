@@ -8,5 +8,6 @@ namespace Gallery.WebUI.Helpers
         public static string DepartamentApiUrl { get { return ConfigurationManager.AppSettings["DepartamentApiUrl"]; } }
         public static string GenreApiUrl { get { return ConfigurationManager.AppSettings["GenreApiUrl"]; } }
         public static string PainterApiUrl { get { return ConfigurationManager.AppSettings["PainterApiUrl"]; } }
+        public static string PictureApiUrl { get { return ConfigurationManager.AppSettings["PictureApiUrl"]; } }
     }
 }
