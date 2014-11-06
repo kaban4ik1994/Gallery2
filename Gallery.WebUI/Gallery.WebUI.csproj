@@ -203,16 +203,18 @@
     <Compile Include="Mappings\DepartamentMappingProfile.cs" />
     <Compile Include="Mappings\GenreMappingProfile.cs" />
     <Compile Include="Mappings\PainterMappingProfile.cs" />
+    <Compile Include="Mappings\PictureMappingProfile.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
     <Compile Include="Models\Departament\DepartamentViewModel.cs" />
     <Compile Include="Models\Genre\GenreViewModel.cs" />
     <Compile Include="Models\Home\CarouselItemViewModel.cs" />
-    <Compile Include="Models\Home\PictureViewModel.cs" />
+    <Compile Include="Models\Home\HomeViewModel.cs" />
     <Compile Include="Models\Account\RegisterViewModel.cs" />
     <Compile Include="Models\Image\ImageViewModel.cs" />
     <Compile Include="Models\Manage\EditAccountViewModel.cs" />
     <Compile Include="Models\Menu\MenuItem.cs" />
     <Compile Include="Models\Painter\PainterViewModel.cs" />
+    <Compile Include="Models\Picture\PictureViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -287,11 +289,12 @@
     <Content Include="Views\Painter\CreatePainter.cshtml" />
     <Content Include="Views\Shared\ImageSummary.cshtml" />
     <Content Include="Views\Painter\EditPainter.cshtml" />
+    <Content Include="Views\Picture\Index.cshtml" />
+    <Content Include="Views\Picture\CreatePicture.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Config\" />
-    <Folder Include="Views\Picture\" />
     <Folder Include="Views\Validation\" />
   </ItemGroup>
   <ItemGroup>

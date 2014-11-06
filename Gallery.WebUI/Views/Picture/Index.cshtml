@@ -1,0 +1,36 @@
+﻿@using Gallery.WebUI.Helpers
+@using Gallery.WebUI.Models.Image
+@using GridMvc.Html
+@model IEnumerable<Gallery.WebUI.Models.Picture.PictureViewModel>
+
+@{
+    ViewBag.Title = "Pictures ";
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-offset-1 title">
+            <h1>@ViewBag.Title</h1>
+        </div>
+        <div class="col-md-offset-1">
+            @Html.ActionLink("Add Picture", "CreatePicture")
+        </div>
+        <div class="col-md-offset-1">
+            @Html.Grid(Model, "_Grid").Columns(
+                columns =>
+                {
+                    columns.Add(foo => foo.Id, true);
+                    columns.Add(foo => foo.Name).Sortable(true).Titled("Name");
+                    columns.Add().Sanitized(false).Encoded(false).Titled("Image").RenderValueAs(foo => Html.Partial("ImageSummary", new ImageViewModel { Width = 75, Height = 90, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(foo.Images, 50, 50, 200, 200) }).ToHtmlString());
+                    columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Edit", "EditPicture", new { id = foo.Id }).ToHtmlString());
+                    columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Delete", "DeletePicture", new { id = foo.Id }).ToHtmlString());
+                }).WithPaging(10)
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/gridmvc")
+}

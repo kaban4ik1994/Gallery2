@@ -48,7 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBInteractions\Concrete\DbFactory.cs" />
+    <Compile Include="DBInteractions\Concrete\DbFactory.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="DBInteractions\Concrete\Disposable.cs" />
     <Compile Include="DBInteractions\Concrete\EntityRepositoryBase.cs" />
     <Compile Include="DBInteractions\Interface\IDbFactory.cs" />
@@ -74,7 +76,9 @@
     <Compile Include="EntityRepositories\Interface\ITokenRepository.cs" />
     <Compile Include="EntityRepositories\Interface\IUserRepository.cs" />
     <Compile Include="GalleryContext.cs" />
-    <Compile Include="GalleryContextInitializer.cs" />
+    <Compile Include="GalleryContextInitializer.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
