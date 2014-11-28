@@ -14,11 +14,6 @@ namespace Gallery.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<DbPainter>()
-                .HasMany(p => p.Images)
-                .WithRequired()
-                .HasForeignKey(p => p.ImagePainterId)
-                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<DbPainter>()
                 .HasMany(p => p.Pictures)
@@ -26,11 +21,11 @@ namespace Gallery.Data
                 .HasForeignKey(p => p.PicturePainterId)
                 .WillCascadeOnDelete(true);
 
-            //modelBuilder.Entity<DbPicture>()
-            //    .HasMany(p => p.Images)
-            //    .WithRequired()
-            //    .HasForeignKey(p => p.ImagePictureId)
-            //    .WillCascadeOnDelete(true);
+            modelBuilder.Entity<DbPicture>()
+                .HasMany(p => p.Images)
+                .WithRequired()
+                .HasForeignKey(p => p.ImagePictureId)
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<DbPicture>()
                 .HasMany(p => p.Comments)

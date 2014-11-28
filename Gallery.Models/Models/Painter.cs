@@ -11,7 +11,5 @@ namespace Gallery.Models.Models
         public string PainterFullName { get; set; }
         [JsonProperty("Pictures")]
         public ICollection<Picture> Pictures { get; set; }
-        [JsonProperty("Images")]
-        public ICollection<Image> Images { get; set; }
     }
 }

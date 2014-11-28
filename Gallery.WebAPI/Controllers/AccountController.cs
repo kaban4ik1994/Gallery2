@@ -1,5 +1,4 @@
-﻿using System.Net;
-using System.Web.Http;
+﻿using System.Web.Http;
 using AutoMapper;
 using Gallery.Entities;
 using Gallery.Models.Models;

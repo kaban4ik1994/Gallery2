@@ -23,12 +23,8 @@ namespace Gallery.Mappings.Mappings
                 .ForMember(de => de.ImageData, options => options.MapFrom(so => so.ImageData))
                 .ForMember(de => de.ImageHeight, options => options.MapFrom(so => so.ImageHeight))
                 .ForMember(de => de.ImageWidth, options => options.MapFrom(so => so.ImageWidth))
-                .ForMember(de => de.ImagePainterId, options => options.MapFrom(so => so.ImagePainterId))
                 .ForMember(de => de.ImagePictureId, options => options.MapFrom(so => so.ImagePictureId))
-                .ForMember(de => de.ImageUserId, options => options.MapFrom(so => so.ImageUserId))
-                .ForMember(de => de.Painter, options => options.MapFrom(so => so.Painter))
                 .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture))
-                .ForMember(de => de.User, options => options.MapFrom(so => so.DbUser))
                 .ForMember(de => de.ImageExtension, options => options.MapFrom(so => so.ImageExtension));
 
         }
@@ -41,12 +37,8 @@ namespace Gallery.Mappings.Mappings
                 .ForMember(de => de.ImageData, options => options.MapFrom(so => so.ImageData))
                 .ForMember(de => de.ImageHeight, options => options.MapFrom(so => so.ImageHeight))
                 .ForMember(de => de.ImageWidth, options => options.MapFrom(so => so.ImageWidth))
-                .ForMember(de => de.ImagePainterId, options => options.MapFrom(so => so.ImagePainterId))
                 .ForMember(de => de.ImagePictureId, options => options.MapFrom(so => so.ImagePictureId))
-                .ForMember(de => de.ImageUserId, options => options.MapFrom(so => so.ImageUserId))
-                .ForMember(de => de.Painter, options => options.MapFrom(so => so.Painter))
                 .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture))
-                .ForMember(de => de.DbUser, options => options.MapFrom(so => so.User))
                 .ForMember(de => de.ImageExtension, options => options.MapFrom(so => so.ImageExtension));
         }
     }

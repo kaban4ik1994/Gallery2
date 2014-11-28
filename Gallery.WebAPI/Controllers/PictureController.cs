@@ -21,7 +21,7 @@ namespace Gallery.WebAPI.Controllers
         [HttpGet]
         public IHttpActionResult Get()
         {
-            var dbPictures = _pictureService.GetPictures();
+            var dbPictures = _pictureService.GetPictures().ToList();
             var pictures = dbPictures.Select(Mapper.Map<Picture>).ToList();
             return Json(pictures, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }

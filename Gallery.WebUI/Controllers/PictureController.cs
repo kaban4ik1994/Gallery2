@@ -1,4 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web;
+using System.Web.Mvc;
+
+using Gallery.Models.Models;
 using Gallery.Util.Conrete;
 using Gallery.Util.Interfaces;
 using Gallery.WebUI.CustomAttribute;
@@ -39,19 +43,76 @@ namespace Gallery.WebUI.Controllers
         [HttpGet]
         public ActionResult CreatePicture()
         {
-            ViewBag.PainterSelection =
-                _painterUtil.GetPainters()
-                    .Select(h => new SelectListItem { Value = h.PainterId.ToString(CultureInfo.InvariantCulture), Text = h.PainterFullName });
-            ViewBag.DepartamentSelection =
-                _departamentUtil.GetDepartaments()
-                    .Select(h => new SelectListItem { Value = h.DepartamentId.ToString(CultureInfo.InvariantCulture), Text = h.DepartamentName });
-            ViewBag.GenreSelection =
-                _genreUtil.GetGenres()
-                    .Select(h => new SelectListItem { Value = h.GenreId.ToString(CultureInfo.InvariantCulture), Text = h.GenreName });
+            var model = new PictureViewModel
+                            {
+                                PainterSelectionList = _painterUtil.GetPainters().Select(x => new SelectListItem { Value = x.PainterId.ToString(CultureInfo.InvariantCulture), Text = x.PainterFullName }).ToList(),
+                                DepartamentSelectionList = _departamentUtil.GetDepartaments().Select(x => new SelectListItem { Value = x.DepartamentId.ToString(CultureInfo.InvariantCulture), Text = x.DepartamentName }).ToList(),
+                                GenreSelectionList = _genreUtil.GetGenres().Select(x => new SelectListItem { Value = x.GenreId.ToString(CultureInfo.InvariantCulture), Text = x.GenreName }).ToList(),
+                            };
 
+            return View(model);
+        }
 
+        [HttpPost]
+        public ActionResult CreatePicture(PictureViewModel model, HttpPostedFileBase imageData)
+        {
+            if (!ModelState.IsValid || imageData == null) return RedirectToAction("Index", "Error");
+            var painter = Mapper.Map<Picture>(model);
+            var tempImage = new Image { ImageData = new byte[imageData.ContentLength] };
+            imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
+            tempImage.ImageName = imageData.FileName;
+            using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
+            {
+                tempImage.ImageHeight = image.Height;
+                tempImage.ImageWidth = image.Width;
+            }
+            painter.Images = new List<Image> { tempImage };
+            _pictureUtil.CreatePicture(painter);
+            return RedirectToAction("Index");
+        }
 
-            return View(new PictureViewModel());
+        [HttpGet]
+        public ActionResult EditPicture(long id)
+        {
+            var picture = _pictureUtil.GetPictureById(id);
+            if (picture == null) return RedirectToAction("Index", "Error");
+            var model = Mapper.Map<PictureViewModel>(picture);
+            TempData["Images"] = model.Images;
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditPicture(PictureViewModel model, HttpPostedFileBase imageData)
+        {
+            if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
+            var picture = Mapper.Map<Picture>(model);
+            picture.Images = (List<Image>)TempData["Images"];
+            if (imageData != null)
+            {
+                var tempImage = new Image { ImageData = new byte[imageData.ContentLength] };
+                imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
+                tempImage.ImageName = imageData.FileName;
+                using (var image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
+                {
+                    tempImage.ImageHeight = image.Height;
+                    tempImage.ImageWidth = image.Width;
+                }
+
+                picture.Images.First().ImageData = tempImage.ImageData;
+                picture.Images.First().ImageName = tempImage.ImageName;
+                picture.Images.First().ImageWidth = tempImage.ImageWidth;
+                picture.Images.First().ImageHeight = tempImage.ImageHeight;
+            }
+            _pictureUtil.UpdatePicture(picture);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult DeletePicture(long id)
+        {
+            _pictureUtil.DeletePicture(id);
+            return RedirectToAction("Index");
         }
     }
 }

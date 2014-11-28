@@ -291,6 +291,7 @@
     <Content Include="Views\Painter\EditPainter.cshtml" />
     <Content Include="Views\Picture\Index.cshtml" />
     <Content Include="Views\Picture\CreatePicture.cshtml" />
+    <Content Include="Views\Picture\EditPicture.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

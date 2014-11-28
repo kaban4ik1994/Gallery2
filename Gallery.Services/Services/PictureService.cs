@@ -26,7 +26,7 @@ namespace Gallery.Services.Services
 
         public DbPicture GetPictureById(long id)
         {
-            var picture = _pictureRepository.GetMany(x => x.PictureId == id).Include(x => x.Genre).Include(x => x.Painter).Include(x => x.DbDepartament).Include(x => x.Comments).FirstOrDefault();
+            var picture = _pictureRepository.GetMany(x => x.PictureId == id).Include(x => x.Genre).Include(x => x.Painter).Include(x => x.DbDepartament).Include(x => x.Comments).Include(x=>x.Images).FirstOrDefault();
             return picture;
         }
 

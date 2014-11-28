@@ -1,7 +1,4 @@
-﻿using System.IO;
-using System.Linq;
-using System.Web.Mvc;
-using AutoMapper;
+﻿using AutoMapper;
 using Gallery.Models.Models;
 using Gallery.WebUI.Models.Painter;
 
@@ -21,8 +18,7 @@ namespace Gallery.WebUI.Mappings
             CreateMap<PainterViewModel, Painter>()
                 .ForMember(de => de.PainterId, options => options.MapFrom(so => so.Id))
                 .ForMember(de => de.PainterFullName, options => options.MapFrom(so => so.Name))
-                .ForMember(de => de.Pictures, options => options.Ignore())
-                .ForMember(de => de.Images, options => options.MapFrom(so => so.Images));
+                .ForMember(de => de.Pictures, options => options.Ignore());
 
         }
 
@@ -30,8 +26,7 @@ namespace Gallery.WebUI.Mappings
         {
             CreateMap<Painter, PainterViewModel>()
                 .ForMember(de => de.Id, options => options.MapFrom(so => so.PainterId))
-                .ForMember(de => de.Name, options => options.MapFrom(so => so.PainterFullName))
-                .ForMember(de => de.Images, options => options.MapFrom(so => so.Images));
+                .ForMember(de => de.Name, options => options.MapFrom(so => so.PainterFullName));
         }
     }
 }

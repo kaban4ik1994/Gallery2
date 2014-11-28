@@ -17,16 +17,9 @@ namespace Gallery.Models.Models
         [JsonProperty("Width")]
         public int ImageWidth { get; set; }
         [JsonProperty("PainterId")]
-        public long? ImagePainterId { get; set; }
-        [JsonProperty("PictureId")]
-        public long? ImagePictureId { get; set; }
-        [JsonProperty("UserId")]
-        public long? ImageUserId { get; set; }
-        [JsonProperty("Painter")]
-        public Painter Painter { get; set; }
+        public long ImagePictureId { get; set; }
         [JsonProperty("Picture")]
         public Picture Picture { get; set; }
-        [JsonProperty("User")]
-        public User User { get; set; }
+
     }
 }

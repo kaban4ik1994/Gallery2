@@ -9,7 +9,6 @@ namespace Gallery.Entities
     {
         public DbPainter()
         {
-            Images=new List<DbImage>();
             Pictures=new List<DbPicture>();
         }
         [Key]
@@ -17,6 +16,5 @@ namespace Gallery.Entities
         public long PainterId { get; set; }
         public string PainterFullName { get; set; }
         public ICollection<DbPicture> Pictures { get; set; }
-        public ICollection<DbImage> Images { get; set; }
     }
 }

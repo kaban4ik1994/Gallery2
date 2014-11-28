@@ -20,13 +20,13 @@ namespace Gallery.Services.Services
         }
         public IEnumerable<DbPainter> GetPainters()
         {
-            var painters = _painterRepository.GetAll().Include(x => x.Images);
+            var painters = _painterRepository.GetAll();
             return painters;
         }
 
         public DbPainter GetPainterById(long id)
         {
-            var painter = _painterRepository.GetAll().Include(x => x.Images).FirstOrDefault(x=>x.PainterId==id);
+            var painter = _painterRepository.GetAll().FirstOrDefault(x=>x.PainterId==id);
             return painter;
         }
 

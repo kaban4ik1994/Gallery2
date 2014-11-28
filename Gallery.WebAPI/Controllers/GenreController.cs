@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Linq;
 using System.Web.Http;
 using AutoMapper;
 using Gallery.Entities;
@@ -24,7 +20,7 @@ namespace Gallery.WebAPI.Controllers
         [HttpGet]
         public IHttpActionResult Get()
         {
-            var dbGenres = _genreService.GetGenres();
+            var dbGenres = _genreService.GetGenres().ToList();
             var genres = dbGenres.Select(Mapper.Map<Genre>).ToList();
             return Json(genres, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }

@@ -21,7 +21,7 @@ namespace Gallery.WebAPI.Controllers
         [HttpGet]
         public IHttpActionResult Get()
         {
-            var dbDepartaments = _departamentService.GetDepartaments();
+            var dbDepartaments = _departamentService.GetDepartaments().ToList();
             var departaments = dbDepartaments.Select(Mapper.Map<Departament>).ToList();
             return Json(departaments, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }

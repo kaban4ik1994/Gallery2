@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
@@ -37,20 +36,11 @@ namespace Gallery.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreatePainter(PainterViewModel model, HttpPostedFileBase imageData)
+        public ActionResult CreatePainter(PainterViewModel model)
         {
 
-            if (!ModelState.IsValid || imageData == null) return RedirectToAction("Index", "Error");
+            if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
             var painter = Mapper.Map<Painter>(model);
-            var tempImage = new Image { ImageData = new byte[imageData.ContentLength] };
-            imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
-            tempImage.ImageName = imageData.FileName;
-            using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
-            {
-                tempImage.ImageHeight = image.Height;
-                tempImage.ImageWidth = image.Width;
-            }
-            painter.Images = new List<Image> { tempImage };
             _painterUtil.CreatePainter(painter);
             return RedirectToAction("Index");
         }
@@ -61,7 +51,6 @@ namespace Gallery.WebUI.Controllers
             var painter = _painterUtil.GetPainterById(id);
             if (painter == null) return RedirectToAction("Index", "Error");
             var model = Mapper.Map<PainterViewModel>(painter);
-            TempData["Images"] = model.Images;
             return View(model);
         }
 
@@ -71,23 +60,6 @@ namespace Gallery.WebUI.Controllers
         {
             if (!ModelState.IsValid) return RedirectToAction("Index", "Error");
             var painter = Mapper.Map<Painter>(model);
-            painter.Images =(List<Image>)TempData["Images"];
-            if (imageData != null)
-            {
-                var tempImage = new Image { ImageData = new byte[imageData.ContentLength] };
-                imageData.InputStream.Read(tempImage.ImageData, 0, imageData.ContentLength);
-                tempImage.ImageName = imageData.FileName;
-                using (var image = System.Drawing.Image.FromStream(imageData.InputStream, true, true))
-                {
-                    tempImage.ImageHeight = image.Height;
-                    tempImage.ImageWidth = image.Width;
-                }
-
-                painter.Images.First().ImageData = tempImage.ImageData;
-                painter.Images.First().ImageName = tempImage.ImageName;
-                painter.Images.First().ImageWidth = tempImage.ImageWidth;
-                painter.Images.First().ImageHeight = tempImage.ImageHeight;
-            }
             _painterUtil.UpdatePainter(painter);
             return RedirectToAction("Index");
         }

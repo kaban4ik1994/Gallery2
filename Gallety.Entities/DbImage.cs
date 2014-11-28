@@ -14,14 +14,8 @@ namespace Gallery.Entities
         public string ImageExtension { get; set; }
         public int ImageHeight { get; set; }
         public int ImageWidth { get; set; }
-        public long? ImagePainterId { get; set; }
-        public long? ImagePictureId { get; set; }
-        public long? ImageUserId { get; set; }
-        [ForeignKey("ImagePainterId")]
-        public DbPainter Painter { get; set; }
+        public long ImagePictureId { get; set; }
         [ForeignKey("ImagePictureId")]
         public DbPicture Picture { get; set; }
-        [ForeignKey("ImageUserId")]
-        public DbUser DbUser { get; set; }
     }
 }

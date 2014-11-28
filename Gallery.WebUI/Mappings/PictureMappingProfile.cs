@@ -1,10 +1,9 @@
-﻿namespace Gallery.WebUI.Mappings
+﻿using AutoMapper;
+using Gallery.Models.Models;
+using Gallery.WebUI.Models.Picture;
+
+namespace Gallery.WebUI.Mappings
 {
-    using AutoMapper;
-
-    using Gallery.Models.Models;
-    using Gallery.WebUI.Models.Picture;
-
     public class PictureMappingProfile : Profile
     {
         protected override void Configure()
@@ -23,9 +22,10 @@
                 .ForMember(de => de.Genre, options => options.Ignore())
                 .ForMember(de => de.Departament, options => options.Ignore())
                 .ForMember(de => de.Images, options => options.MapFrom(so => so.Images))
-                .ForMember(de => de.PictureDepartamentId, options => options.MapFrom(so=>so.DepartamentId))
-                .ForMember(de => de.PicturePainterId, options => options.MapFrom(so=>so.PainterId))
-                .ForMember(de => de.PictureGenreId, options => options.MapFrom(so=>so.GenreId));
+                .ForMember(de => de.PictureDepartamentId, options => options.MapFrom(so => so.DepartamentId))
+                .ForMember(de => de.PicturePainterId, options => options.MapFrom(so => so.PainterId))
+                .ForMember(de => de.PictureGenreId, options => options.MapFrom(so => so.GenreId))
+                .ForMember(de => de.Comments, options => options.Ignore());
         }
 
         private void MapPictureToPictureViewModel()
@@ -36,7 +36,10 @@
                 .ForMember(de => de.DepartamentId, options => options.MapFrom(so => so.PictureDepartamentId))
                 .ForMember(de => de.GenreId, options => options.MapFrom(so => so.PictureGenreId))
                 .ForMember(de => de.PainterId, options => options.MapFrom(so => so.PicturePainterId))
-                .ForMember(de => de.Images, options => options.MapFrom(so => so.Images));
+                .ForMember(de => de.Images, options => options.MapFrom(so => so.Images))
+                .ForMember(de => de.GenreSelectionList, options => options.Ignore())
+                .ForMember(de => de.DepartamentSelectionList, options => options.Ignore())
+                .ForMember(de => de.PainterSelectionList, options => options.Ignore());
         }
     }
 }

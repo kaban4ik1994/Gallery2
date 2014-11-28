@@ -19,8 +19,7 @@ namespace Gallery.Mappings.Mappings
             CreateMap<DbPainter, Painter>()
                 .ForMember(de => de.PainterId, options => options.MapFrom(so => so.PainterId))
                 .ForMember(de => de.PainterFullName, options => options.MapFrom(so => so.PainterFullName))
-                .ForMember(de => de.Pictures, options => options.MapFrom(so => so.Pictures))
-                .ForMember(de => de.Images, options => options.MapFrom(so => so.Images));
+                .ForMember(de => de.Pictures, options => options.MapFrom(so => so.Pictures));
         }
 
         private void MapPainterToDbPainter()
@@ -28,8 +27,7 @@ namespace Gallery.Mappings.Mappings
             CreateMap<Painter, DbPainter>()
                 .ForMember(de => de.PainterId, options => options.MapFrom(so => so.PainterId))
                 .ForMember(de => de.PainterFullName, options => options.MapFrom(so => so.PainterFullName))
-                .ForMember(de => de.Pictures, options => options.MapFrom(so => so.Pictures))
-                .ForMember(de => de.Images, options => options.MapFrom(so => so.Images));
+                .ForMember(de => de.Pictures, options => options.MapFrom(so => so.Pictures));
         }
     }
 }

@@ -13,9 +13,12 @@ namespace Gallery.WebUI.Models.Picture
         [Required(ErrorMessage = "Fill in the field.")]
         [Display(Name = "Name")]
         public string Name { get; set; }
-        public List<Gallery.Models.Models.Image> Images { get; set; }
         public long DepartamentId { get; set; }
         public long PainterId { get; set; }
         public long GenreId { get; set; }
+        public List<Gallery.Models.Models.Image> Images { get; set; }
+        public List<SelectListItem> PainterSelectionList { get; set; }
+        public List<SelectListItem> DepartamentSelectionList { get; set; }
+        public List<SelectListItem> GenreSelectionList { get; set; }
     }
 }
