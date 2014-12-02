@@ -17,13 +17,36 @@
             @using (Html.BeginForm("EditPicture", "Picture", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
             {
                 @Html.AntiForgeryToken()
-                @Html.EditorFor(x => x.Id)
-                @Html.EditorFor(x => x.Name)
+                @Html.EditorFor(x => x.Id);
                 <div class="form-group">
-                        <div class="col-md-offset-1 col-md-10">
-                            @Html.Partial("ImageSummary", new ImageViewModel { Width = 300, Height = 400, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(Model.Images, 200, 200, 400, 400) })
-                        </div>
+                    <div class="col-md-offset-1 col-md-10">
+                        @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+                        @Html.EditorFor(x => x.Name)
                     </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        @Html.Partial("ImageSummary", new ImageViewModel { Width = 300, Height = 400, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(Model.Images, 200, 200, 400, 400) })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        @Html.DropDownListFor(x => x.DepartamentId, Model.DepartamentSelectionList, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        @Html.DropDownListFor(x => x.GenreId, Model.GenreSelectionList, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                        @Html.DropDownListFor(x => x.PainterId, Model.PainterSelectionList, new { @class = "form-control" })
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">

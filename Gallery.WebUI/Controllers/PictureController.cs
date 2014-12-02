@@ -75,8 +75,12 @@ namespace Gallery.WebUI.Controllers
         public ActionResult EditPicture(long id)
         {
             var picture = _pictureUtil.GetPictureById(id);
+
             if (picture == null) return RedirectToAction("Index", "Error");
             var model = Mapper.Map<PictureViewModel>(picture);
+            model.PainterSelectionList = _painterUtil.GetPainters().Select(x => new SelectListItem { Value = x.PainterId.ToString(CultureInfo.InvariantCulture), Text = x.PainterFullName }).ToList();
+            model.DepartamentSelectionList = _departamentUtil.GetDepartaments().Select(x => new SelectListItem { Value = x.DepartamentId.ToString(CultureInfo.InvariantCulture), Text = x.DepartamentName }).ToList();
+            model.GenreSelectionList = _genreUtil.GetGenres().Select(x => new SelectListItem { Value = x.GenreId.ToString(CultureInfo.InvariantCulture), Text = x.GenreName }).ToList();
             TempData["Images"] = model.Images;
             return View(model);
         }

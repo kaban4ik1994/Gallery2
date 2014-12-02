@@ -72,3 +72,9 @@ textarea {
  #sidebar {
      margin-top: 20px;
  }
+
+ .navigation {
+     width: 100%;
+     height: 60px;
+     font-size: 20px;
+ }

@@ -8,12 +8,14 @@
 <div class="row">
     <div class="col-md-12">
 
-        <div class="col-md-offset-1 title">
+        <div class="form-group col-md-offset-1 title">
             <h1>@ViewBag.Title</h1>
         </div>
-        <div class="col-md-offset-1">
-            @Html.ActionLink("Add departament", "CreateDepartament")
+        <div class="form-group col-md-offset-1 col-md-10">
+            <input type='button' class="btn btn-info" value='New Departament' onclick='window.location = "@Url.Action("CreateDepartament", "Departament")";' />
         </div>
+        
+
         <div class="col-md-offset-1">
             @Html.Grid(Model, "_Grid").Columns(
                 columns =>
@@ -21,7 +23,7 @@
                     columns.Add(foo => foo.Id, true);
                     columns.Add(foo => foo.Name).Sortable(true).Titled("Name");
                     columns.Add(foo => foo.Description).Sortable(true).Titled("Description");
-                    columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Edit", "EditDepartament", new { id = foo.Id }).ToHtmlString());
+                    columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => String.Format("<input type='{0}' class='{1}' value={2} onclick='window.location ='{3}''", "button", "btn btn-info", "Edit", Url.Action("EditDepartament", "Departament")));
                     columns.Add().Sanitized(false).Encoded(false).RenderValueAs(foo => Html.ActionLink("Delete", "DeleteDepartament", new { id = foo.Id }).ToHtmlString());
                 }).WithPaging(20)
         </div>
