@@ -1,16 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Gallery.Models.Models;
+﻿using Gallery.Models.Models;
+using Gallery.Util.Interfaces;
 
 namespace Gallery.WebUI.Helpers
 {
     public static class ImageHelper
     {
-        public static Image FilterImagesByMaxHeightAndMaxWidth(List<Image> images, int minHeight,
+        public static Image FilterImagesByMaxHeightAndMaxWidth(IImageUtil imageUtil,long id, int minHeight,
             int minWidth, int maxHeight, int maxWidth)
         {
-            var image = images.FirstOrDefault(x => x.ImageHeight >= minHeight && x.ImageHeight <= maxHeight && x.ImageWidth >= minWidth && x.ImageWidth <= maxWidth) ??
-                        images.Last();
+            var image = imageUtil.GetPictureImageData(id, minHeight, minWidth, maxHeight, maxWidth);
             return image;
         }
     }

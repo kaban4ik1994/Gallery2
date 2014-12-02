@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -21,6 +22,7 @@ namespace Gallery.Util.Conrete
         {
             using (var client = new HttpClient())
             {
+                client.CancelPendingRequests();
                 var result =
                     client.GetAsync(ApiUrl).Result;
                 return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<List<Picture>>(result.Content.ReadAsStringAsync().Result) : null;
@@ -48,6 +50,8 @@ namespace Gallery.Util.Conrete
                 return result.IsSuccessStatusCode ? JsonConvert.DeserializeObject<Picture>(result.Content.ReadAsStringAsync().Result) : null;
             }
         }
+
+       
 
         public Picture CreatePicture(Picture picture)
         {

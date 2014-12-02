@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Gallery.Models.Models;
+﻿using Gallery.Models.Models;
 
 namespace Gallery.WebAPI.Helpers
 {

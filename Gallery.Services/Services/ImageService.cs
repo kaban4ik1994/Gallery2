@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Gallery.Data.DBInteractions.Interface;
 using Gallery.Data.EntityRepositories.Interface;
 using Gallery.Entities;
@@ -50,6 +51,17 @@ namespace Gallery.Services.Services
         public void SaveImage()
         {
             _unitOfWork.Commit();
+        }
+
+        public DbImage GetImageByPictureId(long id, int minHeight, int minWidth, int maxHeight, int maxWidth)
+        {
+            var image = _imageRepository.GetAll()
+                .FirstOrDefault(
+                    x =>
+                        x.ImageHeight >= minHeight && x.ImageHeight <= maxHeight && x.ImageWidth >= minWidth &&
+                        x.ImageWidth <= maxWidth && x.ImagePictureId == id) ??
+                        _imageRepository.GetAll().First(x => x.ImagePictureId == id);
+            return image;
         }
     }
 }

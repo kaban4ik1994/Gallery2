@@ -5,7 +5,7 @@
 
         @foreach (var item in Model)
         {
-            @Html.ActionLink(item.Item, "Index", "Home", new { departament = item.Item }, new { @class = String.Format("{0} {1}", "list-group-item", ViewBag.ActiveItem == item.Item ? "active" : "") })
+            @Html.ActionLink(item.Item, "Index", "Home", new { departament = item.Item }, new { @class = String.Format("{0} {1}", "list-group-item", item.IsActive ? "active" : "") })
         }
     </div>
 </div>

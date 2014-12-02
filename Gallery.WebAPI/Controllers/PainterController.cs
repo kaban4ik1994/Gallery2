@@ -4,7 +4,6 @@ using AutoMapper;
 using Gallery.Entities;
 using Gallery.Models.Models;
 using Gallery.Services.Interfaces;
-using Gallery.WebAPI.Helpers;
 using Newtonsoft.Json;
 
 namespace Gallery.WebAPI.Controllers

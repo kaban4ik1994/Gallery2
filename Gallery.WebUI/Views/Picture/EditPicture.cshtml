@@ -1,4 +1,5 @@
-﻿@using Gallery.WebUI.Helpers
+﻿@using Gallery.Util.Conrete
+@using Gallery.WebUI.Helpers
 @using Gallery.WebUI.Models.Image
 @model Gallery.WebUI.Models.Picture.PictureViewModel
 
@@ -26,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
-                        @Html.Partial("ImageSummary", new ImageViewModel { Width = 300, Height = 400, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(Model.Images, 200, 200, 400, 400) })
+                        @Html.Partial("ImageSummary", new ImageViewModel { Width = 300, Height = 400, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(new ImageUtil(ConfigHeper.ImageApiUrl), Model.Id, 200, 200, 400, 400) })
                     </div>
                 </div>
 
@@ -56,7 +57,7 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
-                        <input type="submit" class="btn-success" value="Submit" />
+                        <input type="submit" class="btn btn-success" value="Submit" />
                     </div>
                 </div>
             }

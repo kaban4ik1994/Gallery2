@@ -39,13 +39,10 @@
                 </p>
                 @RenderBody()
             </div><!--/span-->
-            @Html.Partial("_Menu", MenuHelper.GetMenuItems(new DepartamentUtil(ConfigHeper.DepartamentApiUrl)))
+            @Html.Partial("_Menu", MenuHelper.GetMenuItems(new DepartamentUtil(ConfigHeper.DepartamentApiUrl), (string)ViewBag.Dep))
         </div><!--/row-->
         <!--/content-->
         <hr>
-
-        
-
     </div><!--/.container-->
     <footer>
         <p>&copy; Курсовой проект 2014</p>

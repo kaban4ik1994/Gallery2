@@ -38,7 +38,7 @@ namespace Gallery.Services.Services
 
         public DbUser GetUserByEmail(string email)
         {
-            var user = _userRepository.GetMany(x=>x.Email==email).Include(x=>x.Tokens).Include(x=>x.Role).Include(x=>x.DbComments).FirstOrDefault();
+            var user = _userRepository.GetAll().Include(x => x.Tokens).Include(x => x.Role).Include(x => x.DbComments).FirstOrDefault(x => x.Email == email);
             return user;
         }
         

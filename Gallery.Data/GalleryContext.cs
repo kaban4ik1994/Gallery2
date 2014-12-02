@@ -8,11 +8,12 @@ namespace Gallery.Data
         public GalleryContext()
             : base("GalleryDBConnectionString")
         {
-
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<DbPainter>()

@@ -21,16 +21,17 @@ namespace Gallery.WebAPI.Controllers
         [HttpGet]
         public IHttpActionResult Get()
         {
-            var dbPictures = _pictureService.GetPictures().ToList();
+            var dbPictures = _pictureService.GetPictures();
             var pictures = dbPictures.Select(Mapper.Map<Picture>).ToList();
-            return Json(pictures, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+            var result = Json(pictures, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+            return result;
         }
 
         [HttpGet]
         public IHttpActionResult Get(long id)
         {
             var dbPicture = _pictureService.GetPictureById(id);
-            if (dbPicture == null) return BadRequest("Genre not found!");
+            if (dbPicture == null) return BadRequest("Picture not found!");
             var picture = Mapper.Map<Picture>(dbPicture);
             return Json(picture, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
@@ -39,7 +40,7 @@ namespace Gallery.WebAPI.Controllers
         public IHttpActionResult Get(string name)
         {
             var dbPicture = _pictureService.GetPictureByName(name);
-            if (dbPicture == null) return BadRequest("Genre not found!");
+            if (dbPicture == null) return BadRequest("Picture not found!");
             var picture = Mapper.Map<Picture>(dbPicture);
             return Json(picture, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
@@ -84,6 +85,7 @@ namespace Gallery.WebAPI.Controllers
                 imageExtension, 300, 300);
             var newImage700X700 = ImageConverterHelper.ResizeImage(origImage, origImage.ImageName + "3",
                 imageExtension, 700, 700);
+
 
             dbPicture.Images.ElementAt(0).ImageData = origImage.ImageData;
             dbPicture.Images.ElementAt(0).ImageExtension = imageExtension;

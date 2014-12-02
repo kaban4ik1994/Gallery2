@@ -37,6 +37,12 @@ namespace Gallery.WebUI.Controllers
         {
             var pictures = _pictureUtil.GetPicturess();
             var model = pictures.Select(Mapper.Map<PictureViewModel>).ToList();
+            for (var i = 0; i < model.Count; i++)
+            {
+                model.ElementAt(i).DepartamentName = pictures.ElementAt(i).Departament.DepartamentName;
+                model.ElementAt(i).GenreName = pictures.ElementAt(i).Genre.GenreName;
+                model.ElementAt(i).PainterName = pictures.ElementAt(i).Painter.PainterFullName;
+            }
             return View(model);
         }
 
@@ -78,10 +84,14 @@ namespace Gallery.WebUI.Controllers
 
             if (picture == null) return RedirectToAction("Index", "Error");
             var model = Mapper.Map<PictureViewModel>(picture);
-            model.PainterSelectionList = _painterUtil.GetPainters().Select(x => new SelectListItem { Value = x.PainterId.ToString(CultureInfo.InvariantCulture), Text = x.PainterFullName }).ToList();
-            model.DepartamentSelectionList = _departamentUtil.GetDepartaments().Select(x => new SelectListItem { Value = x.DepartamentId.ToString(CultureInfo.InvariantCulture), Text = x.DepartamentName }).ToList();
-            model.GenreSelectionList = _genreUtil.GetGenres().Select(x => new SelectListItem { Value = x.GenreId.ToString(CultureInfo.InvariantCulture), Text = x.GenreName }).ToList();
+            var painters = _painterUtil.GetPainters();
+            var departaments = _departamentUtil.GetDepartaments();
+            var genres = _genreUtil.GetGenres();
+            model.PainterSelectionList = painters.Select(x => new SelectListItem { Value = x.PainterId.ToString(CultureInfo.InvariantCulture), Text = x.PainterFullName }).ToList();
+            model.DepartamentSelectionList = departaments.Select(x => new SelectListItem { Value = x.DepartamentId.ToString(CultureInfo.InvariantCulture), Text = x.DepartamentName }).ToList();
+            model.GenreSelectionList = genres.Select(x => new SelectListItem { Value = x.GenreId.ToString(CultureInfo.InvariantCulture), Text = x.GenreName }).ToList();
             TempData["Images"] = model.Images;
+
             return View(model);
         }
 

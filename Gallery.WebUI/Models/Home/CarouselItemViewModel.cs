@@ -2,7 +2,7 @@
 {
     public class CarouselItemViewModel
     {
-        public string ImageUrl { get; set; }
+        public string ImageTag { get; set; }
         public bool IsActive { get; set; }
     }
 }

@@ -12,5 +12,6 @@ namespace Gallery.Services.Interfaces
         void UpdateImage(DbImage image);
         void DeleteImage(long id);
         void SaveImage();
+        DbImage GetImageByPictureId(long id, int minHeight, int minWidth, int maxHeight, int maxWidth);
     }
 }

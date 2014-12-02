@@ -1,8 +1,10 @@
-﻿namespace Gallery.WebUI.Models.Home
+﻿using System.Collections.Generic;
+
+namespace Gallery.WebUI.Models.Home
 {
     public class HomeViewModel
     {
-        public string Name { get; set; }
-        public string ImageUrl { get; set; }
+        public List<Gallery.Models.Models.Picture> Pictures { get; set; }
+        public string SelectedDepartament { get; set; }
     }
 }

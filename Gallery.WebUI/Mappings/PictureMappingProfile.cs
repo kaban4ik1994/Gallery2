@@ -37,6 +37,9 @@ namespace Gallery.WebUI.Mappings
                 .ForMember(de => de.GenreId, options => options.MapFrom(so => so.PictureGenreId))
                 .ForMember(de => de.PainterId, options => options.MapFrom(so => so.PicturePainterId))
                 .ForMember(de => de.Images, options => options.MapFrom(so => so.Images))
+                .ForMember(de => de.DepartamentName, options => options.Ignore())
+                .ForMember(de => de.PainterName, options => options.Ignore())
+                .ForMember(de => de.GenreName, options => options.Ignore())
                 .ForMember(de => de.GenreSelectionList, options => options.Ignore())
                 .ForMember(de => de.DepartamentSelectionList, options => options.Ignore())
                 .ForMember(de => de.PainterSelectionList, options => options.Ignore());

@@ -16,6 +16,9 @@ namespace Gallery.WebUI.Models.Picture
         public long DepartamentId { get; set; }
         public long PainterId { get; set; }
         public long GenreId { get; set; }
+        public string PainterName { get; set; }
+        public string GenreName { get; set; }
+        public string DepartamentName { get; set; }
         public List<Gallery.Models.Models.Image> Images { get; set; }
         public List<SelectListItem> PainterSelectionList { get; set; }
         public List<SelectListItem> DepartamentSelectionList { get; set; }

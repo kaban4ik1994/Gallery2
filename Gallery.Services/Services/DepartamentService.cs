@@ -32,7 +32,7 @@ namespace Gallery.Services.Services
 
         public DbDepartament GetDepartamentByName(string name)
         {
-            var departament = _departamentRepository.GetMany(x => x.DepartamentName == name).Include(x => x.Picture).FirstOrDefault();
+            var departament = _departamentRepository.GetAll().Include(x => x.Picture).FirstOrDefault(x => x.DepartamentName==name);
             return departament;
         }
 

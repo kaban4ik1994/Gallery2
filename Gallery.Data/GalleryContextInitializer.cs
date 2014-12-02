@@ -8,7 +8,6 @@ namespace Gallery.Data
     {
         protected override void Seed(GalleryContext context)
         {
-           
             var roles = new List<DbRole>
             {
                 new DbRole {RoleId = 1, RoleName = "admin"},
