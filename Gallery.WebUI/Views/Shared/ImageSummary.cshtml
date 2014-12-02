@@ -3,4 +3,4 @@
 @*<div style='background-image: url("data: image/@Model.Image.ImageExtension;base64,@Convert.ToBase64String(Model.Image.ImageData)") 100% 100%; height: @String.Format("{0}px",Model.Height); width: @String.Format("{0}px",Model.Width)'>
 
 </div>*@
-<img width="@Model.Width" height="@Model.Height" src="data:image/@Model.Image.ImageExtension;base64,@Convert.ToBase64String(Model.Image.ImageData)" />
+<img width="@Model.Width" height="@Model.Height" class="img-rounded" src="data:image/@Model.Image.ImageExtension;base64,@Convert.ToBase64String(Model.Image.ImageData)" />
