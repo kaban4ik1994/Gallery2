@@ -23,9 +23,9 @@ namespace Gallery.WebUI.Mappings
                 .ForMember(de => de.Departament, options => options.Ignore())
                 .ForMember(de => de.Images, options => options.MapFrom(so => so.Images))
                 .ForMember(de => de.PictureDepartamentId, options => options.MapFrom(so => so.DepartamentId))
+                .ForMember(de => de.Comments, options => options.MapFrom(so => so.Comments))
                 .ForMember(de => de.PicturePainterId, options => options.MapFrom(so => so.PainterId))
-                .ForMember(de => de.PictureGenreId, options => options.MapFrom(so => so.GenreId))
-                .ForMember(de => de.Comments, options => options.Ignore());
+                .ForMember(de => de.PictureGenreId, options => options.MapFrom(so => so.GenreId));
         }
 
         private void MapPictureToPictureViewModel()
@@ -42,7 +42,8 @@ namespace Gallery.WebUI.Mappings
                 .ForMember(de => de.GenreName, options => options.Ignore())
                 .ForMember(de => de.GenreSelectionList, options => options.Ignore())
                 .ForMember(de => de.DepartamentSelectionList, options => options.Ignore())
-                .ForMember(de => de.PainterSelectionList, options => options.Ignore());
+                .ForMember(de => de.PainterSelectionList, options => options.Ignore())
+                .ForMember(de => de.Comments, options => options.MapFrom(so => so.Comments));
         }
     }
 }

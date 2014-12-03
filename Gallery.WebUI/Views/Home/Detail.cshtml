@@ -1,0 +1,68 @@
+﻿@using Gallery.Models.Models
+@using Gallery.Util.Conrete
+@using Gallery.WebUI.Helpers
+@using Gallery.WebUI.Models.Image
+@model Gallery.WebUI.Models.Picture.PictureViewModel
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="col-md-offset-1 col-md-10 title">
+            <h1>@ViewBag.Title</h1>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10 text-info">
+                @Html.LabelFor(x => x.Name, new { @class = "text-danger" })
+                @Html.DisplayFor(x => x.Name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10 text-info">
+                @Html.LabelFor(x => x.DepartamentName, new { @class = "text-danger" })
+                @Html.DisplayFor(x => x.DepartamentName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10 text-info">
+                @Html.LabelFor(x => x.PainterName, new { @class = "text-danger" })
+                @Html.DisplayFor(x => x.PainterName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10 text-info">
+                @Html.LabelFor(x => x.GenreName, new { @class = "text-danger" })
+                @Html.DisplayFor(x => x.GenreName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10">
+                @Html.Partial("ImageSummary", new ImageViewModel { Width = 300, Height = 400, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(new ImageUtil(ConfigHeper.ImageApiUrl), Model.Id, 200, 200, 400, 400) })
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10">
+
+            </div>
+        </div>
+
+        @using (Html.BeginForm("Home", "Comment", FormMethod.Post, new { @class = "navbar-form navbar-right login-form", role = "form" }))
+        {
+           
+        }
+    </div>
+</div>

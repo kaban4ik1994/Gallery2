@@ -1,10 +1,14 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+
+using AutoMapper;
+
 using Gallery.Models.Models;
 using Gallery.Util.Conrete;
 using Gallery.Util.Interfaces;
 using Gallery.WebUI.Helpers;
 using Gallery.WebUI.Models.Home;
+using Gallery.WebUI.Models.Picture;
 
 namespace Gallery.WebUI.Controllers
 {
@@ -34,11 +38,17 @@ namespace Gallery.WebUI.Controllers
                 model.Pictures = dep == null ? _pictureUtil.GetPicturess().ToList() : dep.Picture.ToList();
             }
 
-            for (var i = 0; i < model.Pictures.Count; i++) // костыль, ибо ограничения на принимаемое кол-во данных
-            {
-                model.Pictures[i] = _pictureUtil.GetPictureById(model.Pictures[i].PictureId);
-            }
+            return View(model);
+        }
 
+        public ActionResult Detail(long id)
+        {
+            var picture = _pictureUtil.GetPictureById(id);
+            if(picture==null) return RedirectToAction("Index", "Error");
+            var model = Mapper.Map<PictureViewModel>(picture);
+            model.DepartamentName = picture.Departament.DepartamentName;
+            model.GenreName = picture.Genre.GenreName;
+            model.PainterName = picture.Painter.PainterFullName;
             return View(model);
         }
     }

@@ -5,5 +5,5 @@
 <div class="col-sm-6 col-lg-4 picture">
     <h2>@Model.PictureName</h2>
     @Html.Partial("ImageSummary", new ImageViewModel { Width = 300, Height = 400, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(new ImageUtil(ConfigHeper.ImageApiUrl), Model.PictureId, 200, 200, 400, 400) })
-    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    <p><a class="btn btn-success navigation" href="@Url.Action("Detail", "Home", new { id = Model.PictureId })" role="button">View details &raquo;</a></p>
 </div>

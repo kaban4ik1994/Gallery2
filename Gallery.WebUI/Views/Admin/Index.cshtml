@@ -3,20 +3,21 @@
 }
 <div class="row">
     <div class="col-md-12">
-        <div class="col-md-offset-1 title">
+        <div class="col-md-offset-1 col-md-10 title">
             <h1>@ViewBag.Title</h1>
         </div>
+
         <div class="form-group col-md-offset-1 col-md-10">
-            <input type='button' class="btn btn-success navigation" value='Departaments' onclick='window.location = "@Url.Action("Index","Departament")";' />
+            <a class="btn btn-success navigation" href="@Url.Action("Index","Departament")" role="button">Departaments &raquo;</a>
         </div>
         <div class="form-group col-md-offset-1 col-md-10">
-            <input type='button' class="btn btn-success navigation" value='Genres' onclick='window.location = "@Url.Action("Index", "Genre")";' />
+            <a class="btn btn-success navigation" href="@Url.Action("Index", "Genre")" role="button">Genres &raquo;</a>
         </div>
         <div class="form-group col-md-offset-1 col-md-10">
-            <input type='button' class="btn btn-success navigation" value='Painters' onclick='window.location = "@Url.Action("Index", "Painter")";' />
+            <a class="btn btn-success navigation" href="@Url.Action("Index", "Painter")" role="button">Painters &raquo;</a>
         </div>
         <div class="form-group col-md-offset-1 col-md-10">
-            <input type='button' class="btn btn-success navigation" value='Pictures' onclick='window.location = "@Url.Action("Index", "Picture")";' />
+            <a class="btn btn-success navigation" href="@Url.Action("Index", "Picture")" role="button">Pictures &raquo;</a>
         </div>
     </div>
 </div>
