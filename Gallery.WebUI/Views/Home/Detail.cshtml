@@ -11,6 +11,15 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript">
+        function comment() {
+            var content = $('#comment').val();
+            if (content.length == 0) return false;
+            $.post('@Url.Action("Comment", "Home")', { id: @Model.Id, content: content }, function(data) {
+                window.location.href='@Url.Action("Detail","Home", new{id=Model.Id})';
+            });
+        };
+    </script>
 }
 
 <div class="row">
@@ -49,20 +58,39 @@
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-1 col-md-10">
+            <div class="col-md-offset-1 col-md-10 text-center">
                 @Html.Partial("ImageSummary", new ImageViewModel { Width = 300, Height = 400, Image = ImageHelper.FilterImagesByMaxHeightAndMaxWidth(new ImageUtil(ConfigHeper.ImageApiUrl), Model.Id, 200, 200, 400, 400) })
             </div>
         </div>
-       
-        <div class="form-group">
-            <div class="col-md-offset-1 col-md-10">
 
-            </div>
+        <div class="form-group">
+            @foreach (var comment in Model.Comments)
+            {
+                <div class="col-md-offset-1 col-md-10 comment-block">
+                    <div>
+                        @*@comment.User.UserName*@
+                    </div>
+
+                    <div class="pull-right">
+                        @comment.CreatedDate.ToString("f")
+                    </div>
+                    <br />
+                    <div>
+                        @comment.Content
+                    </div>
+                </div>
+            }
         </div>
 
-        @using (Html.BeginForm("Home", "Comment", FormMethod.Post, new { @class = "navbar-form navbar-right login-form", role = "form" }))
-        {
-           
-        }
+        <div class="form-group">
+
+            <div class="col-md-offset-1 col-md-10">
+                <h3>New Comment</h3>
+                <textarea id="comment" class="comment" rows="10"></textarea>
+            </div>
+            <div class="col-md-10 col-md-offset-1">
+                <input type="button" class="btn btn-info" value="Comment" onclick="comment()" />
+            </div>
+        </div>
     </div>
 </div>

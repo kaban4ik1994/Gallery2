@@ -24,6 +24,7 @@ namespace Gallery.WebUI.Models.Picture
         public string GenreName { get; set; }
         [Display(Name = "Departament:")]
         public string DepartamentName { get; set; }
+        public string NewComment { get; set; }
         public List<Comment> Comments { get; set; } 
         public List<Gallery.Models.Models.Image> Images { get; set; }
         public List<SelectListItem> PainterSelectionList { get; set; }

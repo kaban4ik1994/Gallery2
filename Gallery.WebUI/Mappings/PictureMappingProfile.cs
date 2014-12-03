@@ -43,7 +43,9 @@ namespace Gallery.WebUI.Mappings
                 .ForMember(de => de.GenreSelectionList, options => options.Ignore())
                 .ForMember(de => de.DepartamentSelectionList, options => options.Ignore())
                 .ForMember(de => de.PainterSelectionList, options => options.Ignore())
+                .ForMember(de => de.NewComment, options => options.Ignore())
                 .ForMember(de => de.Comments, options => options.MapFrom(so => so.Comments));
+
         }
     }
 }

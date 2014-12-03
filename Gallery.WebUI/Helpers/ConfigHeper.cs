@@ -10,5 +10,6 @@ namespace Gallery.WebUI.Helpers
         public static string PainterApiUrl { get { return ConfigurationManager.AppSettings["PainterApiUrl"]; } }
         public static string PictureApiUrl { get { return ConfigurationManager.AppSettings["PictureApiUrl"]; } }
         public static string ImageApiUrl { get { return ConfigurationManager.AppSettings["ImageApiUrl"]; } }
+        public static string CommentApiUrl { get { return ConfigurationManager.AppSettings["CommentApiUrl"]; } }
     }
 }

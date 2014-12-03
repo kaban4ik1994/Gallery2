@@ -4,14 +4,14 @@ using Gallery.Models.Models;
 
 namespace Gallery.Mappings.Mappings
 {
-    public class CommentMappingProfile: Profile
+    public class CommentMappingProfile : Profile
     {
         protected override void Configure()
         {
             base.Configure();
             MapCommentToDbComment();
             MapDbCommentToComment();
-          //  Mapper.AssertConfigurationIsValid();
+            //  Mapper.AssertConfigurationIsValid();
         }
 
         private void MapDbCommentToComment()
@@ -21,7 +21,10 @@ namespace Gallery.Mappings.Mappings
                 .ForMember(de => de.CreatedDate, options => options.MapFrom(so => so.CreatedDate))
                 .ForMember(de => de.Content, options => options.MapFrom(so => so.Content))
                 .ForMember(de => de.CommentPictureId, options => options.MapFrom(so => so.CommentPictureId))
-                .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture));
+                .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture))
+                .ForMember(de => de.CommentUserId, options => options.MapFrom(so => so.CommentUserId))
+                .ForMember(de => de.User, options => options.MapFrom(so => so.User));
+
         }
 
         private void MapCommentToDbComment()
@@ -31,7 +34,9 @@ namespace Gallery.Mappings.Mappings
                 .ForMember(de => de.CreatedDate, options => options.MapFrom(so => so.CreatedDate))
                 .ForMember(de => de.Content, options => options.MapFrom(so => so.Content))
                 .ForMember(de => de.CommentPictureId, options => options.MapFrom(so => so.CommentPictureId))
-                .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture));
+                .ForMember(de => de.Picture, options => options.MapFrom(so => so.Picture))
+                .ForMember(de => de.CommentUserId, options => options.MapFrom(so => so.CommentUserId))
+                .ForMember(de => de.User, options => options.MapFrom(so => so.User));
         }
     }
 }

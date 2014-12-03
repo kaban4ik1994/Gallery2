@@ -8,6 +8,7 @@ namespace Gallery.Data
     {
         protected override void Seed(GalleryContext context)
         {
+
             var roles = new List<DbRole>
             {
                 new DbRole {RoleId = 1, RoleName = "admin"},
@@ -28,6 +29,10 @@ namespace Gallery.Data
                 context.Roles.Add(dbRole);
             }
             context.Users.Add(admin);
+
+            context.Database.ExecuteSqlCommand(
+                "CREATE TRIGGER trg_UpdateTimeEntry ON dbo.Comments AFTER INSERT AS UPDATE dbo.Comments SET CreatedDate = GETDATE() WHERE CommentId IN (SELECT DISTINCT CommentId FROM Inserted)");
+
             context.SaveChanges();
         }
     }

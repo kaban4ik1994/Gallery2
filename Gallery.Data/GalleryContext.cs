@@ -15,7 +15,7 @@ namespace Gallery.Data
         {
             
             base.OnModelCreating(modelBuilder);
-
+           
             modelBuilder.Entity<DbPainter>()
                 .HasMany(p => p.Pictures)
                 .WithRequired()
