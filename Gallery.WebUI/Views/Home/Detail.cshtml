@@ -6,6 +6,7 @@
 
 @{
     ViewBag.Title = Model.Name;
+    var user = AuthHelper.GetUser(Context, new AccountUtil(ConfigHeper.AccountApiUrl));
 }
 
 @section Scripts {
@@ -81,16 +82,18 @@
                 </div>
             }
         </div>
+        @if (user != null)
+        {
+            <div class="form-group">
 
-        <div class="form-group">
-
-            <div class="col-md-offset-1 col-md-10">
-                <h3>New Comment</h3>
-                <textarea id="comment" class="comment" rows="10"></textarea>
+                <div class="col-md-offset-1 col-md-10">
+                    <h3>New Comment</h3>
+                    <textarea id="comment" class="comment" rows="10"></textarea>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <input type="button" class="btn btn-info" value="Comment" onclick=" comment() " />
+                </div>
             </div>
-            <div class="col-md-10 col-md-offset-1">
-                <input type="button" class="btn btn-info" value="Comment" onclick="comment()" />
-            </div>
-        </div>
+        }
     </div>
 </div>

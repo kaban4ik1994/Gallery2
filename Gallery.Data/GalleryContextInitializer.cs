@@ -24,6 +24,17 @@ namespace Gallery.Data
                 UserId = 1
             };
 
+            for (var i = 0; i < 15; i++)
+            {
+                context.Genres.Add(new DbGenre{GenreName = "Genre"+i});
+                context.Painters.Add(new DbPainter {PainterFullName = "Painter" + i});
+                context.Departaments.Add(new DbDepartament
+                {
+                    DepartamentName = "Departament" + i,
+                    DepartamentDescription = "Description" + i
+                });
+            }
+
             foreach (var dbRole in roles)
             {
                 context.Roles.Add(dbRole);
@@ -32,6 +43,9 @@ namespace Gallery.Data
 
             context.Database.ExecuteSqlCommand(
                 "CREATE TRIGGER trg_UpdateTimeEntry ON dbo.Comments AFTER INSERT AS UPDATE dbo.Comments SET CreatedDate = GETDATE() WHERE CommentId IN (SELECT DISTINCT CommentId FROM Inserted)");
+
+            context.Database.ExecuteSqlCommand(
+                "CREATE PROCEDURE [GetPictureById] (@PictureId INT) AS SELECT  E.PictureId, E.PictureName, E.PictureGenreId, E.PicturePainterId, E.PictureDepartamentId FROM [dbo].[Pictures] E WHERE  E.PictureId = @PictureId RETURN");
 
             context.SaveChanges();
         }
