@@ -12,10 +12,12 @@ namespace Gallery.WebAPI.Controllers
     public class PictureController : ApiController
     {
         private readonly IPictureService _pictureService;
+        private readonly ICommentService _commentService;
 
-        public PictureController(IPictureService pictureService)
+        public PictureController(IPictureService pictureService, ICommentService commentService)
         {
             _pictureService = pictureService;
+            _commentService = commentService;
         }
 
         [HttpGet]
@@ -32,6 +34,7 @@ namespace Gallery.WebAPI.Controllers
         {
             var dbPicture = _pictureService.GetPictureById(id);
             if (dbPicture == null) return BadRequest("Picture not found!");
+            dbPicture.Comments = _commentService.GetCommentsByPictureId(id).ToList();
             var picture = Mapper.Map<Picture>(dbPicture);
             return Json(picture, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }

@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using Gallery.Data.DBInteractions.Interface;
 using Gallery.Data.EntityRepositories.Interface;
 using Gallery.Entities;
@@ -22,6 +24,12 @@ namespace Gallery.Services.Services
             return comments;
         }
 
+        public IEnumerable<DbComment> GetCommentsByPictureId(long id)
+        {
+            var comments = _commentRepository.GetAll().Include(x => x.User).Where(x => x.CommentPictureId==id);
+            return comments;
+        }
+
         public DbComment GetCommentById(long id)
         {
             var comment = _commentRepository.GetById(id);
@@ -42,7 +50,7 @@ namespace Gallery.Services.Services
 
         public void DeleteComment(long id)
         {
-            var comment = _commentRepository.GetById(id);
+            var comment = _commentRepository.GetAll().First(x => x.CommentId==id);
             _commentRepository.Delete(comment);
             _unitOfWork.Commit();
         }

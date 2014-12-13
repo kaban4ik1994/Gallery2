@@ -10,6 +10,7 @@ namespace Gallery.Services.Interfaces
         void CreateComment(DbComment comment);
         void UpdateComment(DbComment comment);
         void DeleteComment(long id);
+        IEnumerable<DbComment> GetCommentsByPictureId(long id);
         void SaveComment();
     }
 }

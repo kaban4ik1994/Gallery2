@@ -20,6 +20,14 @@
                 window.location.href='@Url.Action("Detail","Home", new{id=Model.Id})';
             });
         };
+
+        function deleteComment(id) {
+            $.get('@Url.Action("DeleteComment", "Home")',{id:id}, function(data) {
+                console.log($('#' + id));
+                $('#' + id).remove();
+            });
+            return false;
+        };
     </script>
 }
 
@@ -67,14 +75,22 @@
         <div class="form-group">
             @foreach (var comment in Model.Comments)
             {
-                <div class="col-md-offset-1 col-md-10 comment-block">
-                    <div>
-                        @*@comment.User.UserName*@
+                <div class="col-md-offset-1 col-md-10 comment-block" id="@comment.CommentId">
+
+                    <div class="col-md-5">
+                        @comment.User.UserName
                     </div>
 
-                    <div class="pull-right">
+                    <div class="pull-right col-md-5">
                         @comment.CreatedDate.ToString("f")
+                        @if (AuthHelper.IsAdministrator(Context))
+                        {
+                            <a href="javascript:void(0)" onclick="deleteComment(@comment.CommentId)">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                        }
                     </div>
+
                     <br />
                     <div>
                         @comment.Content

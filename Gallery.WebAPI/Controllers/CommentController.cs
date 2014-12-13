@@ -25,5 +25,12 @@ namespace Gallery.WebAPI.Controllers
             _commentService.CreateComment(dbComment);
             return Json(Mapper.Map<Comment>(dbComment), new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
+
+        [HttpDelete]
+        public IHttpActionResult Delete(long id)
+        {
+            _commentService.DeleteComment(id);
+            return Ok();
+        }
     }
 }

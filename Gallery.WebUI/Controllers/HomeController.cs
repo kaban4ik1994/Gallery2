@@ -5,6 +5,7 @@ using AutoMapper;
 using Gallery.Models.Models;
 using Gallery.Util.Conrete;
 using Gallery.Util.Interfaces;
+using Gallery.WebUI.CustomAttribute;
 using Gallery.WebUI.Helpers;
 using Gallery.WebUI.Models.Home;
 using Gallery.WebUI.Models.Picture;
@@ -62,6 +63,13 @@ namespace Gallery.WebUI.Controllers
             if (picture == null) return;
             var comment = new Comment { CommentPictureId = id, Content = content, CommentUserId = AuthHelper.GetUser(HttpContext, _accountUtil).UserId };
             _commentUtil.CreateComment(comment);
+        }
+
+        [PageAuthorize(UserRoles = "admin")]
+        public ActionResult DeleteComment(long id)
+        {
+            _commentUtil.DeleteComment(id);
+            return RedirectToAction("Detail", new { id });
         }
     }
 }
